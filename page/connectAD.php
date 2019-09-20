@@ -10,7 +10,7 @@
 			$host = "127.0.0.1";
 			$user = "root";
 			$password = "";
-			$dbname = "mlr1";
+			$dbname = "mlr2";
 			$port='3307';
 			break;
 						
