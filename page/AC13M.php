@@ -42,7 +42,7 @@
 						}					
 					} else {
 						echo "<select size=\"1\" name=\"numero\" id=\"numero\" disabled=\"disabled\" >";	
-						echo "<option>Aucune information...</option>" ;
+						echo "<option>Aucune information...</option>";
 					}		
 	    		?>   
 	    	</select>
@@ -69,14 +69,14 @@
 			<textarea class="commentaire" name="commentaire" id="commentaire" rows="5" cols="15"></textarea>
 			
 			<br/>
-			<br/> 
+			<br/>
 			
 			
 			
 			<input id="tournee" name="tournee" type="hidden" value="<?php echo "$TRNNUM" ?>" />
-			<input id="valider" name="valider" type="submit" value="Valider" onclick="location.href='AC12odifiertraitement.php'"/>
-			<input id="cancel" type="button" name="retour" value="Annuler" onclick="location.href='AC13.php'"  />
-		</form>    
+			<input id="valider" name="valider" type="submit" value="Valider"/>
+			<input id="cancel" type="button" name="retour" value="Annuler" onclick="location.href='AC12.php'" />
+		</form>
 </aside>
 <footer>
 
