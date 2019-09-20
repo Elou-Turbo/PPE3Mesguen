@@ -11,7 +11,7 @@
 <section1></section1>
 <section2></section2>
 <aside>
-    <h1>Ajout de tourn�e</h1>
+    <h1>Ajout de tournée</h1>
     <hr />
     <br />
     <br />
@@ -56,7 +56,7 @@
             <br />
             <br />
 
-            <label for="voiture">V�hicule :</label>
+            <label for="voiture">Véhicule :</label>
 
             <?php
 				$sql = "SELECT VEHIMMAT FROM vehicule";
@@ -163,7 +163,7 @@
             <input id="ajouter" name="ajouter" type="submit" value="Ajouter"  disabled/>
         </form>
         <br />
-        <input id="back" type="button" name="retour" value="Retour" onclick="location.href='../connexion.php'" />
+        <input id="back" type="button" name="retour" value="Retour" onclick="location.href='../Index.php'" />
 
         <?php 
 			if (isset($_GET['message']))
