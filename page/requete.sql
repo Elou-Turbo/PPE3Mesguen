@@ -46,3 +46,6 @@ ERREUR SQL : 13 Sep 2019 - 9:49:02.000000 --> INSERT INTO tournee(TRNNUM, VEHIMM
 				VALUES (+1,'',11,'','2019/09/13 09:48:00') : (Cannot add or update a child row: a foreign key constraint fails (`bdd_mesguen`.`tournee`, CONSTRAINT `tournee_ibfk_1` FOREIGN KEY (`VEHIMMAT`) REFERENCES `vehicule` (`VEHIMMAT`))) 
 ERREUR SQL : 13 Sep 2019 - 9:49:43.000000 --> INSERT INTO tournee(TRNNUM, VEHIMMAT, CHFID, TRNCOMMENTAIRE, TRNDTE) 
 				VALUES (+1,'',11,'','2019/09/13 09:48:00') : (Cannot add or update a child row: a foreign key constraint fails (`bdd_mesguen`.`tournee`, CONSTRAINT `tournee_ibfk_1` FOREIGN KEY (`VEHIMMAT`) REFERENCES `vehicule` (`VEHIMMAT`))) 
+ERREUR SQL : 20 Sep 2019 - 11:39:12.000000 --> SELECT TRNNUM,TRNDTE,CHFNOM,VEHIMMAT 
+							FROM tournee,chauffeur 
+							WHERE tournee.CHFID=chauffeur.CHFID; : () 
