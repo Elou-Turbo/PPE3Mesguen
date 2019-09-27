@@ -1,0 +1,4 @@
+V1.0
+Mise en place du Versionning du PPE 2 Mesguen.
+Nous metterons à jour ce .txt à chaque fois qu'une modification à été apporté au code.
+

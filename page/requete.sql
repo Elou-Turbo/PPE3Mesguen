@@ -40,7 +40,6 @@ ERREUR SQL : 9 May 2019 - 10:38:05.000000 --> SELECT ETPID, LIEUNOM
 						AND etape.LIEUID = lieu.LIEUID 
 						AND TRNNUM =  : (You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5) 
 ERREUR SQL : 13 Sep 2019 - 9:14:19.000000 --> SELECT TRNNUM,TRNDTE,CHFNOM,VEHIMMAT 
-							FROM tournee,chauffeur 
 							WHERE tournee.CHFID=chauffeur.CHFID; : () 
 ERREUR SQL : 13 Sep 2019 - 9:49:02.000000 --> INSERT INTO tournee(TRNNUM, VEHIMMAT, CHFID, TRNCOMMENTAIRE, TRNDTE) 
 				VALUES (+1,'',11,'','2019/09/13 09:48:00') : (Cannot add or update a child row: a foreign key constraint fails (`bdd_mesguen`.`tournee`, CONSTRAINT `tournee_ibfk_1` FOREIGN KEY (`VEHIMMAT`) REFERENCES `vehicule` (`VEHIMMAT`))) 

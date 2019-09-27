@@ -53,7 +53,7 @@
 			<br/>
 			
 			<label>Pris en charge le :</label>
-			<input type="date" value="8/7/15/ 8:15" name="RDVPrise" id="RDVPrise" />
+			<input type="date" value="8/7/15/ 8:15" name="RDVPrise" id="RDVPrise"/>
 			
 			<br/>
 			<br/>

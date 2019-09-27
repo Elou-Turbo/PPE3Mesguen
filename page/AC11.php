@@ -87,7 +87,7 @@
 						<td> 
 							<form id="form_effacer" action="supprimer.php">
 								<input id="tournee" name="tournee" type="hidden" value="<?php echo "$TRNNUM" ?>" />
-								<input id="effacer" name="effacer" type="image" src="../image/cross.png" />
+								<input id="effacer" name="effacer" type="image" src="../image/cross.png" onclick = "if(!confirm('Voulez-vous supprimer')) return false;" />
 							</form> 
 						</td>
 						
@@ -106,7 +106,7 @@
 		</div>
 		
 		<br/>
-		<input id="back" type="button" name="retour" value="Retour" onclick="location.href='../connexion.php'" />
+		<input id="back" type="button" name="retour" value="Retour" onclick="location.href='../Index.php'" />
 		<?php 
 		
 			if (isset($_GET['message']))
