@@ -5,3 +5,5 @@ Nous metterons à jour ce .txt à chaque fois qu'une modification à été appor
 V1.01
 Correction de l'affichage
 
+V1.02
+l'affichage de des etapes sont affiches par rapor à etpid (et non la date)
