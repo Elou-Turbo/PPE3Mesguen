@@ -53,10 +53,10 @@
 			<br/>
 			
 			<label>Rendez-vous entre :</label>
-			<input type="date" name="RDVDebut" id="RDVDebut"/>
+			<input type="date" value="<?php $date = date("Y/m/d H:i:00"); echo "$date" ?>" name="RDVDebut" id="RDVDebut"/>
 			
 			<label>Et :</label>
-			<input type="date" name="RDVFin" id="RDVFin"/>
+			<input type="date" value="<?php $date = date("Y/m/d H:i:00"); echo "$date" ?>" name="RDVFin" id="RDVFin"/>
 			
 			<br/>
 			<br/>

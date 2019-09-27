@@ -11,7 +11,7 @@
 <section1></section1>
 <section2></section2>
 <aside>
-    <h1>Modification de tournée</h1>
+    <h1>Modification de tournï¿½e</h1>
     <hr />
     <br />
     <br />
@@ -81,7 +81,7 @@
                 <br />
                 <br />
 
-                <label for="voiture">Véhicule :</label>
+                <label for="voiture">Vï¿½hicule :</label>
 
                 <?php
 				$sql = "SELECT VEHIMMAT 

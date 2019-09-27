@@ -48,3 +48,13 @@ ERREUR SQL : 13 Sep 2019 - 9:49:43.000000 --> INSERT INTO tournee(TRNNUM, VEHIMM
 ERREUR SQL : 20 Sep 2019 - 11:39:12.000000 --> SELECT TRNNUM,TRNDTE,CHFNOM,VEHIMMAT 
 							FROM tournee,chauffeur 
 							WHERE tournee.CHFID=chauffeur.CHFID; : () 
+ERREUR SQL : 27 Sep 2019 - 10:00:34.000000 --> SELECT LIEUNOM 
+												FROM lieu,etape
+												WHERE etape.LIEUID = lieu.LIEUID
+												AND etape.TRNNUM = 2
+												ORDER BY ETIP DESC; : (Unknown column 'ETIP' in 'order clause') 
+ERREUR SQL : 27 Sep 2019 - 10:00:49.000000 --> SELECT LIEUNOM 
+												FROM lieu,etape
+												WHERE etape.LIEUID = lieu.LIEUID
+												AND etape.TRNNUM = 2
+												ORDER BY ETIP DESC; : (Unknown column 'ETIP' in 'order clause') 
