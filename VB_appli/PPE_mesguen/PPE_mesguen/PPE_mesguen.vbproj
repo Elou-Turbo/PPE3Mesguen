@@ -102,6 +102,12 @@
       <DependentUpon>AC11.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AC12.Designer.vb">
+      <DependentUpon>AC12.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AC12.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_Connexion.Designer.vb">
       <DependentUpon>Form_Connexion.vb</DependentUpon>
     </Compile>
