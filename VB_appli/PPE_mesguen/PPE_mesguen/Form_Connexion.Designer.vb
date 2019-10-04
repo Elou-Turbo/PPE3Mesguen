@@ -23,21 +23,21 @@ Partial Class Form_Connexion
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.White
+        Me.GroupBox1.Controls.Add(Me.TextBox2)
+        Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.RichTextBox2)
-        Me.GroupBox1.Controls.Add(Me.RichTextBox1)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label1)
@@ -47,15 +47,17 @@ Partial Class Form_Connexion
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
-        'Label1
+        'Button1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Rockwell", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(118, 32)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(141, 29)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Connexion"
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button1.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(35, 225)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(297, 45)
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "CONNEXION"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Label2
         '
@@ -77,33 +79,32 @@ Partial Class Form_Connexion
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Mot de passe"
         '
-        'RichTextBox1
+        'Label1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(35, 169)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(297, 34)
-        Me.RichTextBox1.TabIndex = 3
-        Me.RichTextBox1.Text = ""
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Rockwell", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(118, 32)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(141, 29)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Connexion"
         '
-        'RichTextBox2
+        'TextBox1
         '
-        Me.RichTextBox2.Location = New System.Drawing.Point(35, 108)
-        Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(297, 36)
-        Me.RichTextBox2.TabIndex = 4
-        Me.RichTextBox2.Text = ""
+        Me.TextBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(35, 169)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(297, 31)
+        Me.TextBox1.TabIndex = 6
+        Me.TextBox1.UseSystemPasswordChar = True
         '
-        'Button1
+        'TextBox2
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button1.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(35, 226)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(297, 45)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "CONNEXION"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.TextBox2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(35, 108)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(297, 31)
+        Me.TextBox2.TabIndex = 7
         '
         'Form_Connexion
         '
@@ -121,9 +122,9 @@ Partial Class Form_Connexion
     End Sub
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents RichTextBox2 As System.Windows.Forms.RichTextBox
-    Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
 End Class

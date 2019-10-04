@@ -34,6 +34,7 @@ Partial Class AC11
         '
         'TableTournee
         '
+        Me.TableTournee.BackgroundColor = System.Drawing.Color.White
         Me.TableTournee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.TableTournee.Location = New System.Drawing.Point(67, 92)
         Me.TableTournee.Name = "TableTournee"
@@ -42,8 +43,9 @@ Partial Class AC11
         '
         'Label1
         '
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(291, 9)
+        Me.Label1.Font = New System.Drawing.Font("Rockwell", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(274, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(454, 42)
         Me.Label1.TabIndex = 1
@@ -100,7 +102,7 @@ Partial Class AC11
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Green
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1062, 541)
         Me.Controls.Add(Me.cmbTable)
         Me.Controls.Add(Me.cmbBases)
