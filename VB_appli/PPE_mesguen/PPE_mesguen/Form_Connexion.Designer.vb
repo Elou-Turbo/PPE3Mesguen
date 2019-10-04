@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class Form_Connexion
     Inherits System.Windows.Forms.Form
 
     'Form remplace la méthode Dispose pour nettoyer la liste des composants.
@@ -23,111 +23,107 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.White
-        Me.GroupBox1.Controls.Add(Me.RichTextBox2)
         Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.RichTextBox2)
         Me.GroupBox1.Controls.Add(Me.RichTextBox1)
-        Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox1.Location = New System.Drawing.Point(35, 37)
+        Me.GroupBox1.Location = New System.Drawing.Point(33, 25)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(448, 300)
+        Me.GroupBox1.Size = New System.Drawing.Size(370, 326)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
-        '
-        'RichTextBox2
-        '
-        Me.RichTextBox2.Location = New System.Drawing.Point(28, 162)
-        Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
-        Me.RichTextBox2.Size = New System.Drawing.Size(389, 39)
-        Me.RichTextBox2.TabIndex = 6
-        Me.RichTextBox2.Text = ""
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button1.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(28, 215)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(389, 46)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "CONNEXION"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Location = New System.Drawing.Point(28, 102)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(389, 36)
-        Me.RichTextBox1.TabIndex = 3
-        Me.RichTextBox1.Tag = ""
-        Me.RichTextBox1.Text = ""
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(25, 141)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(91, 18)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Mot de passe"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(25, 81)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(117, 18)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Nom d'utilisateur"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Rockwell", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(151, 29)
+        Me.Label1.Location = New System.Drawing.Point(118, 32)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(141, 29)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Connexion"
         '
-        'Form1
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(31, 86)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(128, 19)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Nom d'utilisateur"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(31, 147)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(100, 19)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Mot de passe"
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(35, 169)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(297, 34)
+        Me.RichTextBox1.TabIndex = 3
+        Me.RichTextBox1.Text = ""
+        '
+        'RichTextBox2
+        '
+        Me.RichTextBox2.Location = New System.Drawing.Point(35, 108)
+        Me.RichTextBox2.Name = "RichTextBox2"
+        Me.RichTextBox2.Size = New System.Drawing.Size(297, 36)
+        Me.RichTextBox2.TabIndex = 4
+        Me.RichTextBox2.Text = ""
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button1.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(35, 226)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(297, 45)
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "CONNEXION"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Form_Connexion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(521, 375)
+        Me.ClientSize = New System.Drawing.Size(437, 376)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Name = "Form_Connexion"
+        Me.Text = "Form_Connexion"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
     Friend WithEvents RichTextBox2 As System.Windows.Forms.RichTextBox
-
+    Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class
