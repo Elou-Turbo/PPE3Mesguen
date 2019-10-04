@@ -59,7 +59,7 @@
 												FROM lieu,etape
 												WHERE etape.LIEUID = lieu.LIEUID
 												AND etape.TRNNUM = ".$TRNNUM."
-												ORDER BY ETPHREDEBUT ASC;";
+												ORDER BY ETPID ASC;";
 								
 								$depart = executeSQL($depart_sql); 
 								$depart = mysqli_fetch_array($depart,);
@@ -75,7 +75,7 @@
 												FROM lieu,etape
 												WHERE etape.LIEUID = lieu.LIEUID
 												AND etape.TRNNUM = ".$TRNNUM."
-												ORDER BY ETPHREDEBUT DESC;";
+												ORDER BY ETPID DESC;";
 								
 								$arrivee = executeSQL($arrivee_sql); 
 								$arrivee = mysqli_fetch_array($arrivee,);
