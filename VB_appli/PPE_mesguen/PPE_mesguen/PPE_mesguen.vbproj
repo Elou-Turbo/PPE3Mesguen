@@ -134,6 +134,9 @@
     <EmbeddedResource Include="AC11.resx">
       <DependentUpon>AC11.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AC12.resx">
+      <DependentUpon>AC12.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Connexion.resx">
       <DependentUpon>Form_Connexion.vb</DependentUpon>
     </EmbeddedResource>
