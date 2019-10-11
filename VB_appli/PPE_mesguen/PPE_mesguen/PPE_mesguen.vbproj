@@ -102,6 +102,12 @@
       <DependentUpon>AC11.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AC12.Designer.vb">
+      <DependentUpon>AC12.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AC12.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_Connexion.Designer.vb">
       <DependentUpon>Form_Connexion.vb</DependentUpon>
     </Compile>
@@ -127,6 +133,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AC11.resx">
       <DependentUpon>AC11.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AC12.resx">
+      <DependentUpon>AC12.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Connexion.resx">
       <DependentUpon>Form_Connexion.vb</DependentUpon>
