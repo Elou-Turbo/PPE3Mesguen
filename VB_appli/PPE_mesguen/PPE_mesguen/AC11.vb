@@ -5,6 +5,7 @@
     Dim cb As MySqlCommandBuilder
 
     Private Sub AC11_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+
         'TODO: cette ligne de code charge les données dans la table 'DataSet1.TOURNEE'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
         Me.TOURNEETableAdapter.Fill(Me.DataSet1.TOURNEE)
         'Dim Chaine As String
@@ -12,6 +13,12 @@
         'connexionSQL = New MySqlConnection(Chaine)
         'connexionSQL.open()
         'MessageBox.Show("Connexion Reussi")
+
+        Dim Chaine As String
+        Chaine = "server=127.0.0.1 ; port=3307 ; userid=root ; password=; database=mlr2; pooling=false"
+        connexionSQL = New MySqlConnection(Chaine)
+        connexionSQL.Open()
+
 
         'Dim reader As MySqlDataReader
         'Dim cmd As New MySqlCommand("SHOW DATABASES", connexionSQL)

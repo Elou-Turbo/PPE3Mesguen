@@ -1,15 +1,20 @@
 ﻿Public Class Form_Connexion
 
-    Private Sub Utilisateur_TextChanged(sender As System.Object, e As System.EventArgs)
-
+    Private Sub Utilisateur_TextChanged(sender As System.Object, e As System.EventArgs)     
     End Sub
 
-    Private Sub MotDePasse_TextChanged(sender As System.Object, e As System.EventArgs)
-
+    Private Sub MotDePasse_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
     End Sub
 
-    Private Sub Connexion_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
-        AC11.Show()
-        Me.Close()
+    Private Sub Connexion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+
+        If (TextBox_pass.Text = "phicorp29") Then
+            AC11.Show()
+            Me.Hide()
+        Else
+            MessageBox.Show("Mot de passe incorrect")
+        End If
+
     End Sub
 End Class
+
