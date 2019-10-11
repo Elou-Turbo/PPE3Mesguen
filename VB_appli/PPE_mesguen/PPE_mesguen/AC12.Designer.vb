@@ -27,12 +27,17 @@ Partial Class AC12
         Me.ImmatVehi = New System.Windows.Forms.Label()
         Me.PriseCharge = New System.Windows.Forms.Label()
         Me.Comment = New System.Windows.Forms.Label()
+        Me.EtapeId = New System.Windows.Forms.Label()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.ListNomChauf = New System.Windows.Forms.ListBox()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.ListImmatVehi = New System.Windows.Forms.ListBox()
         Me.SuspendLayout()
         '
         'DteTournee
         '
         Me.DteTournee.AutoSize = True
-        Me.DteTournee.Location = New System.Drawing.Point(11, 13)
+        Me.DteTournee.Location = New System.Drawing.Point(12, 64)
         Me.DteTournee.Name = "DteTournee"
         Me.DteTournee.Size = New System.Drawing.Size(30, 13)
         Me.DteTournee.TabIndex = 0
@@ -41,7 +46,7 @@ Partial Class AC12
         'NomChauf
         '
         Me.NomChauf.AutoSize = True
-        Me.NomChauf.Location = New System.Drawing.Point(12, 44)
+        Me.NomChauf.Location = New System.Drawing.Point(12, 104)
         Me.NomChauf.Name = "NomChauf"
         Me.NomChauf.Size = New System.Drawing.Size(53, 13)
         Me.NomChauf.TabIndex = 1
@@ -50,7 +55,7 @@ Partial Class AC12
         'ImmatVehi
         '
         Me.ImmatVehi.AutoSize = True
-        Me.ImmatVehi.Location = New System.Drawing.Point(15, 76)
+        Me.ImmatVehi.Location = New System.Drawing.Point(12, 134)
         Me.ImmatVehi.Name = "ImmatVehi"
         Me.ImmatVehi.Size = New System.Drawing.Size(48, 13)
         Me.ImmatVehi.TabIndex = 2
@@ -59,7 +64,7 @@ Partial Class AC12
         'PriseCharge
         '
         Me.PriseCharge.AutoSize = True
-        Me.PriseCharge.Location = New System.Drawing.Point(16, 102)
+        Me.PriseCharge.Location = New System.Drawing.Point(12, 164)
         Me.PriseCharge.Name = "PriseCharge"
         Me.PriseCharge.Size = New System.Drawing.Size(86, 13)
         Me.PriseCharge.TabIndex = 3
@@ -68,17 +73,63 @@ Partial Class AC12
         'Comment
         '
         Me.Comment.AutoSize = True
-        Me.Comment.Location = New System.Drawing.Point(19, 128)
+        Me.Comment.Location = New System.Drawing.Point(12, 193)
         Me.Comment.Name = "Comment"
         Me.Comment.Size = New System.Drawing.Size(68, 13)
         Me.Comment.TabIndex = 4
         Me.Comment.Text = "Commentaire"
         '
+        'EtapeId
+        '
+        Me.EtapeId.AutoSize = True
+        Me.EtapeId.Location = New System.Drawing.Point(276, 24)
+        Me.EtapeId.Name = "EtapeId"
+        Me.EtapeId.Size = New System.Drawing.Size(40, 13)
+        Me.EtapeId.TabIndex = 5
+        Me.EtapeId.Text = "Etapes"
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(73, 58)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(103, 20)
+        Me.DateTimePicker1.TabIndex = 6
+        Me.DateTimePicker1.Value = New Date(2019, 10, 11, 8, 57, 43, 0)
+        '
+        'ListNomChauf
+        '
+        Me.ListNomChauf.FormattingEnabled = True
+        Me.ListNomChauf.Location = New System.Drawing.Point(73, 100)
+        Me.ListNomChauf.Name = "ListNomChauf"
+        Me.ListNomChauf.Size = New System.Drawing.Size(103, 17)
+        Me.ListNomChauf.TabIndex = 7
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Location = New System.Drawing.Point(104, 164)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(108, 20)
+        Me.DateTimePicker2.TabIndex = 8
+        '
+        'ListImmatVehi
+        '
+        Me.ListImmatVehi.FormattingEnabled = True
+        Me.ListImmatVehi.Location = New System.Drawing.Point(73, 130)
+        Me.ListImmatVehi.Name = "ListImmatVehi"
+        Me.ListImmatVehi.Size = New System.Drawing.Size(103, 17)
+        Me.ListImmatVehi.TabIndex = 9
+        '
         'AC12
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.ClientSize = New System.Drawing.Size(469, 261)
+        Me.Controls.Add(Me.ListImmatVehi)
+        Me.Controls.Add(Me.DateTimePicker2)
+        Me.Controls.Add(Me.ListNomChauf)
+        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.EtapeId)
         Me.Controls.Add(Me.Comment)
         Me.Controls.Add(Me.PriseCharge)
         Me.Controls.Add(Me.ImmatVehi)
@@ -95,4 +146,9 @@ Partial Class AC12
     Friend WithEvents ImmatVehi As System.Windows.Forms.Label
     Friend WithEvents PriseCharge As System.Windows.Forms.Label
     Friend WithEvents Comment As System.Windows.Forms.Label
+    Friend WithEvents EtapeId As System.Windows.Forms.Label
+    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents ListNomChauf As System.Windows.Forms.ListBox
+    Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents ListImmatVehi As System.Windows.Forms.ListBox
 End Class
