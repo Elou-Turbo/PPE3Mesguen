@@ -8,8 +8,7 @@
         Dim Chaine As String
         Chaine = "server=127.0.0.1 ; port=3307 ; userid=root ; password=; database=mlr2; pooling=false"
         connexionSQL = New MySqlConnection(Chaine)
-        connexionSQL.open()
-        MessageBox.Show("Connexion Reussi")
+        connexionSQL.Open()
 
         Dim reader As MySqlDataReader
         Dim cmd As New MySqlCommand("SHOW DATABASES", connexionSQL)
