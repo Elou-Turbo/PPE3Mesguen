@@ -29,12 +29,14 @@ Partial Class Form_Connexion
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.White
+        Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.TextBox_Login)
         Me.GroupBox1.Controls.Add(Me.TextBox_pass)
         Me.GroupBox1.Controls.Add(Me.Button1)
@@ -69,9 +71,9 @@ Partial Class Form_Connexion
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button1.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(35, 225)
+        Me.Button1.Location = New System.Drawing.Point(49, 224)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(297, 45)
+        Me.Button1.Size = New System.Drawing.Size(124, 45)
         Me.Button1.TabIndex = 5
         Me.Button1.Text = "CONNEXION"
         Me.Button1.UseVisualStyleBackColor = False
@@ -106,6 +108,18 @@ Partial Class Form_Connexion
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Connexion"
         '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(189, 225)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(124, 45)
+        Me.Button2.TabIndex = 8
+        Me.Button2.Text = "RETOUR"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
         'Form_Connexion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -127,4 +141,5 @@ Partial Class Form_Connexion
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents TextBox_Login As System.Windows.Forms.TextBox
     Friend WithEvents TextBox_pass As System.Windows.Forms.TextBox
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

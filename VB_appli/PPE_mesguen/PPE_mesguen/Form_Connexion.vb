@@ -8,13 +8,18 @@
 
     Private Sub Connexion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
 
-        If (TextBox_pass.Text = "phicorp29") Then
+        If (TextBox_pass.Text = "phicorp29") And (TextBox_Login.Text = "phicorp29") Then
             AC11.Show()
             Me.Hide()
         Else
-            MessageBox.Show("Mot de passe incorrect")
+            MessageBox.Show("Identifiant ou Mot de passe incorrect")
         End If
 
+    End Sub
+
+
+    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
+        Me.Close()
     End Sub
 End Class
 
