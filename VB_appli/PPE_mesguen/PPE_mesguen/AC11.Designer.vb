@@ -22,22 +22,38 @@ Partial Class AC11
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.TableTournee = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.cmbBases = New System.Windows.Forms.ListBox()
-        Me.cmbTable = New System.Windows.Forms.ListBox()
+        Me.DataSet1 = New PPE_mesguen.DataSet1()
+        Me.TOURNEEBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TOURNEETableAdapter = New PPE_mesguen.DataSet1TableAdapters.TOURNEETableAdapter()
+        Me.TRNNUMDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VEHIMMATDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CHFIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TRNCOMMENTAIREDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TRNPECCHAUFFEURDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TRNDTEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.TableTournee, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TOURNEEBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TableTournee
         '
+        Me.TableTournee.AllowUserToAddRows = False
+        Me.TableTournee.AllowUserToDeleteRows = False
+        Me.TableTournee.AutoGenerateColumns = False
         Me.TableTournee.BackgroundColor = System.Drawing.Color.White
         Me.TableTournee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.TableTournee.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.TRNNUMDataGridViewTextBoxColumn, Me.VEHIMMATDataGridViewTextBoxColumn, Me.CHFIDDataGridViewTextBoxColumn, Me.TRNCOMMENTAIREDataGridViewTextBoxColumn, Me.TRNPECCHAUFFEURDataGridViewTextBoxColumn, Me.TRNDTEDataGridViewTextBoxColumn})
+        Me.TableTournee.DataSource = Me.TOURNEEBindingSource
         Me.TableTournee.Location = New System.Drawing.Point(67, 92)
         Me.TableTournee.Name = "TableTournee"
+        Me.TableTournee.ReadOnly = True
         Me.TableTournee.Size = New System.Drawing.Size(844, 376)
         Me.TableTournee.TabIndex = 0
         '
@@ -82,21 +98,61 @@ Partial Class AC11
         Me.Button3.Text = "SUPPRIMER"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'cmbBases
+        'DataSet1
         '
-        Me.cmbBases.FormattingEnabled = True
-        Me.cmbBases.Location = New System.Drawing.Point(99, 56)
-        Me.cmbBases.Name = "cmbBases"
-        Me.cmbBases.Size = New System.Drawing.Size(123, 30)
-        Me.cmbBases.TabIndex = 5
+        Me.DataSet1.DataSetName = "DataSet1"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'cmbTable
+        'TOURNEEBindingSource
         '
-        Me.cmbTable.FormattingEnabled = True
-        Me.cmbTable.Location = New System.Drawing.Point(398, 56)
-        Me.cmbTable.Name = "cmbTable"
-        Me.cmbTable.Size = New System.Drawing.Size(147, 30)
-        Me.cmbTable.TabIndex = 6
+        Me.TOURNEEBindingSource.DataMember = "TOURNEE"
+        Me.TOURNEEBindingSource.DataSource = Me.DataSet1
+        '
+        'TOURNEETableAdapter
+        '
+        Me.TOURNEETableAdapter.ClearBeforeFill = True
+        '
+        'TRNNUMDataGridViewTextBoxColumn
+        '
+        Me.TRNNUMDataGridViewTextBoxColumn.DataPropertyName = "TRNNUM"
+        Me.TRNNUMDataGridViewTextBoxColumn.HeaderText = "TRNNUM"
+        Me.TRNNUMDataGridViewTextBoxColumn.Name = "TRNNUMDataGridViewTextBoxColumn"
+        Me.TRNNUMDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'VEHIMMATDataGridViewTextBoxColumn
+        '
+        Me.VEHIMMATDataGridViewTextBoxColumn.DataPropertyName = "VEHIMMAT"
+        Me.VEHIMMATDataGridViewTextBoxColumn.HeaderText = "VEHIMMAT"
+        Me.VEHIMMATDataGridViewTextBoxColumn.Name = "VEHIMMATDataGridViewTextBoxColumn"
+        Me.VEHIMMATDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CHFIDDataGridViewTextBoxColumn
+        '
+        Me.CHFIDDataGridViewTextBoxColumn.DataPropertyName = "CHFID"
+        Me.CHFIDDataGridViewTextBoxColumn.HeaderText = "CHFID"
+        Me.CHFIDDataGridViewTextBoxColumn.Name = "CHFIDDataGridViewTextBoxColumn"
+        Me.CHFIDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'TRNCOMMENTAIREDataGridViewTextBoxColumn
+        '
+        Me.TRNCOMMENTAIREDataGridViewTextBoxColumn.DataPropertyName = "TRNCOMMENTAIRE"
+        Me.TRNCOMMENTAIREDataGridViewTextBoxColumn.HeaderText = "TRNCOMMENTAIRE"
+        Me.TRNCOMMENTAIREDataGridViewTextBoxColumn.Name = "TRNCOMMENTAIREDataGridViewTextBoxColumn"
+        Me.TRNCOMMENTAIREDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'TRNPECCHAUFFEURDataGridViewTextBoxColumn
+        '
+        Me.TRNPECCHAUFFEURDataGridViewTextBoxColumn.DataPropertyName = "TRNPECCHAUFFEUR"
+        Me.TRNPECCHAUFFEURDataGridViewTextBoxColumn.HeaderText = "TRNPECCHAUFFEUR"
+        Me.TRNPECCHAUFFEURDataGridViewTextBoxColumn.Name = "TRNPECCHAUFFEURDataGridViewTextBoxColumn"
+        Me.TRNPECCHAUFFEURDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'TRNDTEDataGridViewTextBoxColumn
+        '
+        Me.TRNDTEDataGridViewTextBoxColumn.DataPropertyName = "TRNDTE"
+        Me.TRNDTEDataGridViewTextBoxColumn.HeaderText = "TRNDTE"
+        Me.TRNDTEDataGridViewTextBoxColumn.Name = "TRNDTEDataGridViewTextBoxColumn"
+        Me.TRNDTEDataGridViewTextBoxColumn.ReadOnly = True
         '
         'AC11
         '
@@ -104,8 +160,6 @@ Partial Class AC11
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1062, 541)
-        Me.Controls.Add(Me.cmbTable)
-        Me.Controls.Add(Me.cmbBases)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -115,6 +169,8 @@ Partial Class AC11
         Me.Text = "Form1"
         Me.TransparencyKey = System.Drawing.Color.Lime
         CType(Me.TableTournee, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TOURNEEBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -123,7 +179,14 @@ Partial Class AC11
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents cmbBases As System.Windows.Forms.ListBox
-    Friend WithEvents cmbTable As System.Windows.Forms.ListBox
+    Friend WithEvents DataSet1 As PPE_mesguen.DataSet1
+    Friend WithEvents TOURNEEBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents TOURNEETableAdapter As PPE_mesguen.DataSet1TableAdapters.TOURNEETableAdapter
+    Friend WithEvents TRNNUMDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents VEHIMMATDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CHFIDDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents TRNCOMMENTAIREDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents TRNPECCHAUFFEURDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents TRNDTEDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
 
 End Class
