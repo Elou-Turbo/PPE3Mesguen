@@ -88,6 +88,7 @@
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
     <Import Include="System.Data" />
+    <Import Include="System.Data.Odbc" />
     <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
     <Import Include="System.Windows.Forms" />
@@ -100,6 +101,12 @@
     </Compile>
     <Compile Include="AC11.Designer.vb">
       <DependentUpon>AC11.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AC12.Designer.vb">
+      <DependentUpon>AC12.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AC12.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DataSet1.Designer.vb">
@@ -135,6 +142,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AC11.resx">
       <DependentUpon>AC11.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AC12.resx">
+      <DependentUpon>AC12.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Connexion.resx">
       <DependentUpon>Form_Connexion.vb</DependentUpon>
@@ -191,6 +201,9 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\valider.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
