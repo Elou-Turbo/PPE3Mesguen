@@ -60,6 +60,9 @@
     End Sub
 
     Private Sub DateTimePicker2_ValueChanged(sender As System.Object, e As System.EventArgs) Handles DateTimePicker2.ValueChanged
+        'Format JJ/MM/AAAA
+        DateTimePicker2.Format = DateTimePickerFormat.Custom
+        DateTimePicker2.CustomFormat = "d/M/YY "
 
     End Sub
 
@@ -71,6 +74,10 @@
         'Retour à l'écran précédent AC11
         AC11.Show()
         Me.Hide()
+
+    End Sub
+
+    Private Sub ButtonAjout_Click(sender As System.Object, e As System.EventArgs) Handles ButtonAjout.Click
 
     End Sub
 End Class
