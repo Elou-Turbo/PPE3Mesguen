@@ -1,4 +1,4 @@
-﻿Public Class Form_Connexion
+﻿Public Class MESGUEN
 
     Private Sub Utilisateur_TextChanged(sender As System.Object, e As System.EventArgs)
     End Sub
