@@ -1,6 +1,6 @@
 ﻿Public Class Form_Connexion
 
-    Private Sub Utilisateur_TextChanged(sender As System.Object, e As System.EventArgs)     
+    Private Sub Utilisateur_TextChanged(sender As System.Object, e As System.EventArgs)
     End Sub
 
     Private Sub MotDePasse_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -20,6 +20,10 @@
 
     Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
         Me.Close()
+    End Sub
+
+    Private Sub Form_Connexion_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+
     End Sub
 End Class
 
