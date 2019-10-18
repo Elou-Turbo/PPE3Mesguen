@@ -23,8 +23,9 @@
 
     End Sub
 
-    Private Sub ChoixDateTournee_ValueChanged(sender As System.Object, e As System.EventArgs)
 
-
+    Private Sub DateTimePicker1_ValueChanged(sender As System.Object, e As System.EventArgs) Handles DateTimePicker1.ValueChanged
+        DateTimePicker1.Format = DateTimePickerFormat.Custom
+        DateTimePicker1.CustomFormat = "dd/MM/YYYY"
     End Sub
 End Class
