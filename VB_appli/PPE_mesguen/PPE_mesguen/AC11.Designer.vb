@@ -22,30 +22,100 @@ Partial Class AC11
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.TableTournee = New System.Windows.Forms.DataGridView()
+        Me.NTOURNEEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NOMDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VEHICULEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DEPARTDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ARRIVERDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataTable2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet1 = New PPE_mesguen.DataSet1()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.cmbBases = New System.Windows.Forms.ListBox()
-        Me.cmbTable = New System.Windows.Forms.ListBox()
+        Me.Modifier = New System.Windows.Forms.Button()
+        Me.DataTable2TableAdapter = New PPE_mesguen.DataSet1TableAdapters.DataTable2TableAdapter()
         CType(Me.TableTournee, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataTable2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TableTournee
         '
+        Me.TableTournee.AllowUserToAddRows = False
+        Me.TableTournee.AllowUserToDeleteRows = False
+        Me.TableTournee.AutoGenerateColumns = False
+        Me.TableTournee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.TableTournee.BackgroundColor = System.Drawing.Color.White
         Me.TableTournee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.TableTournee.Location = New System.Drawing.Point(67, 92)
+        Me.TableTournee.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NTOURNEEDataGridViewTextBoxColumn, Me.NOMDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn1, Me.VEHICULEDataGridViewTextBoxColumn, Me.DEPARTDataGridViewTextBoxColumn, Me.ARRIVERDataGridViewTextBoxColumn})
+        Me.TableTournee.DataSource = Me.DataTable2BindingSource
+        Me.TableTournee.Location = New System.Drawing.Point(171, 81)
         Me.TableTournee.Name = "TableTournee"
-        Me.TableTournee.Size = New System.Drawing.Size(844, 376)
+        Me.TableTournee.ReadOnly = True
+        Me.TableTournee.Size = New System.Drawing.Size(820, 376)
         Me.TableTournee.TabIndex = 0
+        '
+        'NTOURNEEDataGridViewTextBoxColumn
+        '
+        Me.NTOURNEEDataGridViewTextBoxColumn.DataPropertyName = "N° TOURNEE"
+        Me.NTOURNEEDataGridViewTextBoxColumn.HeaderText = "N° TOURNEE"
+        Me.NTOURNEEDataGridViewTextBoxColumn.Name = "NTOURNEEDataGridViewTextBoxColumn"
+        Me.NTOURNEEDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NOMDataGridViewTextBoxColumn
+        '
+        Me.NOMDataGridViewTextBoxColumn.DataPropertyName = "NOM"
+        Me.NOMDataGridViewTextBoxColumn.HeaderText = "NOM"
+        Me.NOMDataGridViewTextBoxColumn.Name = "NOMDataGridViewTextBoxColumn"
+        Me.NOMDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "DATE"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "DATE"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'VEHICULEDataGridViewTextBoxColumn
+        '
+        Me.VEHICULEDataGridViewTextBoxColumn.DataPropertyName = "VEHICULE"
+        Me.VEHICULEDataGridViewTextBoxColumn.HeaderText = "VEHICULE"
+        Me.VEHICULEDataGridViewTextBoxColumn.Name = "VEHICULEDataGridViewTextBoxColumn"
+        Me.VEHICULEDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DEPARTDataGridViewTextBoxColumn
+        '
+        Me.DEPARTDataGridViewTextBoxColumn.DataPropertyName = "DEPART"
+        Me.DEPARTDataGridViewTextBoxColumn.HeaderText = "DEPART"
+        Me.DEPARTDataGridViewTextBoxColumn.Name = "DEPARTDataGridViewTextBoxColumn"
+        Me.DEPARTDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ARRIVERDataGridViewTextBoxColumn
+        '
+        Me.ARRIVERDataGridViewTextBoxColumn.DataPropertyName = "ARRIVER"
+        Me.ARRIVERDataGridViewTextBoxColumn.HeaderText = "ARRIVER"
+        Me.ARRIVERDataGridViewTextBoxColumn.Name = "ARRIVERDataGridViewTextBoxColumn"
+        Me.ARRIVERDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DataTable2BindingSource
+        '
+        Me.DataTable2BindingSource.DataMember = "DataTable2"
+        Me.DataTable2BindingSource.DataSource = Me.DataSet1
+        '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet1"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Rockwell", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(274, 9)
+        Me.Label1.Location = New System.Drawing.Point(364, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(454, 42)
         Me.Label1.TabIndex = 1
@@ -55,7 +125,7 @@ Partial Class AC11
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(429, 490)
+        Me.Button1.Location = New System.Drawing.Point(291, 490)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(163, 39)
         Me.Button1.TabIndex = 2
@@ -65,9 +135,9 @@ Partial Class AC11
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(942, 192)
+        Me.Button2.Location = New System.Drawing.Point(685, 490)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(92, 41)
+        Me.Button2.Size = New System.Drawing.Size(163, 39)
         Me.Button2.TabIndex = 3
         Me.Button2.Text = "AJOUTER"
         Me.Button2.UseVisualStyleBackColor = True
@@ -75,37 +145,34 @@ Partial Class AC11
         'Button3
         '
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(942, 279)
+        Me.Button3.Location = New System.Drawing.Point(1068, 287)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(92, 38)
         Me.Button3.TabIndex = 4
         Me.Button3.Text = "SUPPRIMER"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'cmbBases
+        'Modifier
         '
-        Me.cmbBases.FormattingEnabled = True
-        Me.cmbBases.Location = New System.Drawing.Point(99, 56)
-        Me.cmbBases.Name = "cmbBases"
-        Me.cmbBases.Size = New System.Drawing.Size(123, 30)
-        Me.cmbBases.TabIndex = 5
+        Me.Modifier.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Modifier.Location = New System.Drawing.Point(1068, 192)
+        Me.Modifier.Name = "Modifier"
+        Me.Modifier.Size = New System.Drawing.Size(92, 41)
+        Me.Modifier.TabIndex = 5
+        Me.Modifier.Text = "MODIFIER"
+        Me.Modifier.UseVisualStyleBackColor = True
         '
-        'cmbTable
+        'DataTable2TableAdapter
         '
-        Me.cmbTable.FormattingEnabled = True
-        Me.cmbTable.Location = New System.Drawing.Point(398, 56)
-        Me.cmbTable.Name = "cmbTable"
-        Me.cmbTable.Size = New System.Drawing.Size(147, 30)
-        Me.cmbTable.TabIndex = 6
+        Me.DataTable2TableAdapter.ClearBeforeFill = True
         '
         'AC11
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1062, 541)
-        Me.Controls.Add(Me.cmbTable)
-        Me.Controls.Add(Me.cmbBases)
+        Me.ClientSize = New System.Drawing.Size(1221, 541)
+        Me.Controls.Add(Me.Modifier)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -115,15 +182,27 @@ Partial Class AC11
         Me.Text = "Form1"
         Me.TransparencyKey = System.Drawing.Color.Lime
         CType(Me.TableTournee, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataTable2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
-    End Sub
+End Sub
     Friend WithEvents TableTournee As System.Windows.Forms.DataGridView
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents cmbBases As System.Windows.Forms.ListBox
-    Friend WithEvents cmbTable As System.Windows.Forms.ListBox
+    Friend WithEvents DataSet1 As PPE_mesguen.DataSet1
+
+    Friend WithEvents Modifier As System.Windows.Forms.Button
+    Friend WithEvents DateDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataTable2BindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents DataTable2TableAdapter As PPE_mesguen.DataSet1TableAdapters.DataTable2TableAdapter
+    Friend WithEvents NTOURNEEDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NOMDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents VEHICULEDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DEPARTDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ARRIVERDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
 
 End Class
