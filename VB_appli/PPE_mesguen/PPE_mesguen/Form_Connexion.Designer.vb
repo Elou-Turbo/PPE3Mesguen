@@ -23,20 +23,22 @@ Partial Class Form_Connexion
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox_Login = New System.Windows.Forms.TextBox()
+        Me.TextBox_pass = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.White
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.Button2)
+        Me.GroupBox1.Controls.Add(Me.TextBox_Login)
+        Me.GroupBox1.Controls.Add(Me.TextBox_pass)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label3)
@@ -47,14 +49,31 @@ Partial Class Form_Connexion
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
+        'TextBox_Login
+        '
+        Me.TextBox_Login.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox_Login.Location = New System.Drawing.Point(35, 108)
+        Me.TextBox_Login.Name = "TextBox_Login"
+        Me.TextBox_Login.Size = New System.Drawing.Size(297, 31)
+        Me.TextBox_Login.TabIndex = 7
+        '
+        'TextBox_pass
+        '
+        Me.TextBox_pass.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox_pass.Location = New System.Drawing.Point(35, 169)
+        Me.TextBox_pass.Name = "TextBox_pass"
+        Me.TextBox_pass.Size = New System.Drawing.Size(297, 31)
+        Me.TextBox_pass.TabIndex = 6
+        Me.TextBox_pass.UseSystemPasswordChar = True
+        '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button1.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(35, 225)
+        Me.Button1.Location = New System.Drawing.Point(49, 224)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(297, 45)
+        Me.Button1.Size = New System.Drawing.Size(124, 45)
         Me.Button1.TabIndex = 5
         Me.Button1.Text = "CONNEXION"
         Me.Button1.UseVisualStyleBackColor = False
@@ -89,22 +108,17 @@ Partial Class Form_Connexion
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Connexion"
         '
-        'TextBox1
+        'Button2
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(35, 169)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(297, 31)
-        Me.TextBox1.TabIndex = 6
-        Me.TextBox1.UseSystemPasswordChar = True
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(35, 108)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(297, 31)
-        Me.TextBox2.TabIndex = 7
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(189, 225)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(124, 45)
+        Me.Button2.TabIndex = 8
+        Me.Button2.Text = "RETOUR"
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Form_Connexion
         '
@@ -125,6 +139,7 @@ Partial Class Form_Connexion
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox_Login As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox_pass As System.Windows.Forms.TextBox
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class
