@@ -23,6 +23,7 @@ Partial Class AC11
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AC11))
         Me.TableTournee = New System.Windows.Forms.DataGridView()
         Me.NTOURNEEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NOMDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -178,8 +179,10 @@ Partial Class AC11
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TableTournee)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "AC11"
-        Me.Text = "Form1"
+        Me.Text = "Liste des tournées"
         Me.TransparencyKey = System.Drawing.Color.Lime
         CType(Me.TableTournee, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataTable2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
