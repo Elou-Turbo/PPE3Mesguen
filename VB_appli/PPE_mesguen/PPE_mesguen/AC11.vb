@@ -1,11 +1,12 @@
 ﻿Public Class AC11
-    Dim connexionSQL As MySqlConnection
+    Dim connexionSQL As New Odbc.OdbcConnection
     Dim donnee As DataTable
     Dim da As MySqlDataAdapter
     Dim cb As MySqlCommandBuilder
 
     Private Sub AC11_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        Me.TOURNEETableAdapter.Fill(Me.DataSet1.TOURNEE)
+        'TODO: cette ligne de code charge les données dans la table 'DataSet1.DataTable2'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
+        'Me.DataTable2TableAdapter.Fill(Me.DataSet1.DataTable2)
         'Dim Chaine As String
         'Chaine = "server=127.0.0.1 ; port=3307 ; userid=root ; password=; database=mlr2; pooling=false"
         'connexionSQL = New MySqlConnection(Chaine)
@@ -65,4 +66,15 @@
         Me.Close()
     End Sub
 
+
+    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
+        'AC12.show()
+    End Sub
+
+    'Private Sub Button3_Click(sender As System.Object, e As System.EventArgs) Handles Button3.Click
+    '    Dim trnum As Integer
+    '    trnum = TableTournee.CurrentRow.Cells.Item(0).Value
+    '    myCommand = New Odbc.OdbcCommand("DELETE FROM ETAPE WHERE TRNNUM = " & trnum & ";", connexionSQL)
+    '    myCommand.ExecuteNonQuery()
+    'End Sub
 End Class
