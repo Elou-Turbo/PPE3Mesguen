@@ -1,26 +1,30 @@
 ﻿Public Class AC11
     Dim connexionSQL As New Odbc.OdbcConnection
+    Dim myreader As Odbc.OdbcDataReader
     Dim donnee As DataTable
-    Dim da As MySqlDataAdapter
-    Dim cb As MySqlCommandBuilder
-
+    Dim da As odbc.OdbcDataAdapter
+    Dim cb As Odbc.OdbcCommandBuilder
+    Dim connstring As String
+    Dim myCommand As New Odbc.OdbcCommand
+   
     Private Sub AC11_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        'TODO: cette ligne de code charge les données dans la table 'DataSet1.DataTable2'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
-        'Me.DataTable2TableAdapter.Fill(Me.DataSet1.DataTable2)
-        'Dim Chaine As String
-        'Chaine = "server=127.0.0.1 ; port=3307 ; userid=root ; password=; database=mlr2; pooling=false"
-        'connexionSQL = New MySqlConnection(Chaine)
-        'connexionSQL.open()
-        'MessageBox.Show("Connexion Reussi")
 
-        'Dim reader As MySqlDataReader
-        'Dim cmd As New MySqlCommand("SHOW DATABASES", connexionSQL)
-        'reader = cmd.ExecuteReader()
-        'cmbBases.Items.Clear()
-        'While (reader.Read())
-        '    cmbBases.Items.Add(reader.GetString(0))
-        'End While
-        'reader.Close()
+
+
+        connstring = "DSN=ORA02;Uid=u_Mesguen;Pwd=estran;"
+        connexionSQL.ConnectionString = connstring
+
+        Try
+            connexionSQL.Open()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+
+        'TODO: cette ligne de code charge les données dans la table 'DataSet1.DataTable2'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
+        Me.DataTable2TableAdapter.Fill(Me.DataSet1.DataTable2)
+
+    
     End Sub
 
    
@@ -51,7 +55,7 @@
         'TableTournee.DataSource = donnee
     End Sub
 
-    Private Sub TableTournee_CellContentClick(sender As System.Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles TableTournee.CellContentClick
+    Private Sub TableTournee_CellContentClick(sender As System.Object, e As System.Windows.Forms.DataGridViewCellEventArgs)
         'da = New MySqlDataAdapter("Select  from " + cmbTable.SelectedItem.ToString(), connexionSQL)
         'MsgBox(cmbTable.SelectedItem.ToString())
         'donnee = New DataTable
@@ -71,10 +75,17 @@
         'AC12.show()
     End Sub
 
-    'Private Sub Button3_Click(sender As System.Object, e As System.EventArgs) Handles Button3.Click
-    '    Dim trnum As Integer
-    '    trnum = TableTournee.CurrentRow.Cells.Item(0).Value
-    '    myCommand = New Odbc.OdbcCommand("DELETE FROM ETAPE WHERE TRNNUM = " & trnum & ";", connexionSQL)
-    '    myCommand.ExecuteNonQuery()
-    'End Sub
+
+    Private Sub Suppr_Click(sender As System.Object, e As System.EventArgs) Handles Suppr.Click
+        Dim trnum As Integer
+        trnum = TableTournee.CurrentRow.Cells.Item(0).Value
+
+        myCommand = New Odbc.OdbcCommand("DELETE FROM ETAPE WHERE TRNNUM = " & trnum & ";", connexionSQL)
+        myCommand.ExecuteNonQuery()
+        myCommand = New Odbc.OdbcCommand("DELETE FROM TOURNEE WHERE TRNNUM = " & trnum & ";", connexionSQL)
+        myCommand.ExecuteNonQuery()
+
+
+    End Sub
+
 End Class
