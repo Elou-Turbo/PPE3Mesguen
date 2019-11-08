@@ -35,7 +35,9 @@ Partial Class AC12
         Me.ButtonAnnulation = New System.Windows.Forms.Button()
         Me.IdEtape = New System.Windows.Forms.Label()
         Me.ButtonAjout = New System.Windows.Forms.Button()
-        Me.ChauffeurTableAdapter1 = New PPE_mesguen.DataSet1TableAdapters.CHAUFFEURTableAdapter()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.DataSet11 = New PPE_mesguen.DataSet1()
+        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DateTournee
@@ -154,15 +156,25 @@ Partial Class AC12
         Me.ButtonAjout.Text = "Ajouter"
         Me.ButtonAjout.UseVisualStyleBackColor = False
         '
-        'ChauffeurTableAdapter1
+        'ListBox1
         '
-        Me.ChauffeurTableAdapter1.ClearBeforeFill = True
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(259, 122)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(125, 17)
+        Me.ListBox1.TabIndex = 13
+        '
+        'DataSet11
+        '
+        Me.DataSet11.DataSetName = "DataSet1"
+        Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'AC12
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(594, 438)
+        Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.ButtonAjout)
         Me.Controls.Add(Me.IdEtape)
         Me.Controls.Add(Me.ButtonAnnulation)
@@ -178,6 +190,7 @@ Partial Class AC12
         Me.Controls.Add(Me.DateTournee)
         Me.Name = "AC12"
         Me.Text = "AC12"
+        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -195,5 +208,6 @@ Partial Class AC12
     Friend WithEvents ButtonAnnulation As System.Windows.Forms.Button
     Friend WithEvents IdEtape As System.Windows.Forms.Label
     Friend WithEvents ButtonAjout As System.Windows.Forms.Button
-    Friend WithEvents ChauffeurTableAdapter1 As PPE_mesguen.DataSet1TableAdapters.CHAUFFEURTableAdapter
+    Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
+    Friend WithEvents DataSet11 As PPE_mesguen.DataSet1
 End Class
