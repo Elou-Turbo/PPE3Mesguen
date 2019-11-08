@@ -11,7 +11,8 @@
 
 
     Private Sub AC12_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        
+        'TODO: cette ligne de code charge les données dans la table 'DataSet1.CHAUFFEUR'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
+
         connString = "Dsn=CNXORA_Mesguen;uid=u_mesguen;Pwd=estran;"
 
         myConnection.ConnectionString = connString
@@ -22,6 +23,15 @@
         Catch ex As Odbc.OdbcException
             MessageBox.Show(ex.Message)
         End Try
+
+        Dim query As String = "SELECT CHFID,CHFNOM FROM CHAUFFEUR"
+        donnee = New DataTable
+        myAdapter = New Odbc.OdbcDataAdapter(query, myConnection)
+        myBuilder = New Odbc.OdbcCommandBuilder(myAdapter)
+
+        ListBox1.DisplayMember = "CHFNOM"
+        ListBox1.ValueMember = "CHFID"
+        ListBox1.DataSource = donnee
 
     End Sub
 
@@ -117,16 +127,17 @@
 
     Private Sub ListBox1_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ListBox1.SelectedIndexChanged
 
-        Dim query As String = "SELECT CHFID,CHFNOM FROM CHAUFFEUR"
-        donnee = New DataTable
-        myAdapter = New Odbc.OdbcDataAdapter(query, myConnection)
-        myBuilder = New Odbc.OdbcCommandBuilder(myAdapter)
-        myAdapter.Fill(donnee)
+        'Dim query As String = "SELECT CHFID,CHFNOM FROM CHAUFFEUR"
+        'donnee = New DataTable
+        'myAdapter = New Odbc.OdbcDataAdapter(query, myConnection)
+        'myBuilder = New Odbc.OdbcCommandBuilder(myAdapter)
+        'myAdapter.Fill(donnee)
 
 
-        ListBox1.DisplayMember = "CHFNOM"
-        ListBox1.ValueMember = "CHFID"
-        ListBox1.DataSource = donnee
+        'ListBox1.DisplayMember = "CHFNOM"
+        'ListBox1.ValueMember = "CHFID"
+        'ListBox1.DataSource = donnee
 
     End Sub
+
 End Class
