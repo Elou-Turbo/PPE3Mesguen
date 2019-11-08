@@ -22,5 +22,8 @@
         Me.Close()
     End Sub
 
+    Private Sub Form_Connexion_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
 

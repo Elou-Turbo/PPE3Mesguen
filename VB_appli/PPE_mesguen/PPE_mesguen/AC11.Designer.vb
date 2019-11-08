@@ -23,14 +23,13 @@ Partial Class AC11
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Retour = New System.Windows.Forms.Button()
+        Me.Ajouter = New System.Windows.Forms.Button()
         Me.Suppr = New System.Windows.Forms.Button()
         Me.Modifier = New System.Windows.Forms.Button()
-        Me.DataSet1 = New PPE_mesguen.DataSet1()
-        Me.DataTable2TableAdapter = New PPE_mesguen.DataSet1TableAdapters.DataTable2TableAdapter()
-        Me.DataSet11 = New PPE_mesguen.DataSet1()
         Me.TableTournee = New System.Windows.Forms.DataGridView()
         Me.NTOURNEEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NOMDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -40,16 +39,19 @@ Partial Class AC11
         Me.ARRIVERDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataTable2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.DataSet1 = New PPE_mesguen.DataSet1()
+        Me.DataTable2TableAdapter = New PPE_mesguen.DataSet1TableAdapters.DataTable2TableAdapter()
+        Me.DataSet11 = New PPE_mesguen.DataSet1()
         CType(Me.TableTournee, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataTable2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
-        Me.Label1.Font = New System.Drawing.Font("Rockwell", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.Location = New System.Drawing.Point(364, 9)
         Me.Label1.Name = "Label1"
@@ -58,25 +60,25 @@ Partial Class AC11
         Me.Label1.Text = "LISTE DES TOURNEES"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Button1
+        'Retour
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(291, 490)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(163, 39)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "RETOUR"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Retour.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Retour.Location = New System.Drawing.Point(291, 490)
+        Me.Retour.Name = "Retour"
+        Me.Retour.Size = New System.Drawing.Size(163, 39)
+        Me.Retour.TabIndex = 2
+        Me.Retour.Text = "RETOUR"
+        Me.Retour.UseVisualStyleBackColor = True
         '
-        'Button2
+        'Ajouter
         '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(685, 490)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(163, 39)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "AJOUTER"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Ajouter.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Ajouter.Location = New System.Drawing.Point(685, 490)
+        Me.Ajouter.Name = "Ajouter"
+        Me.Ajouter.Size = New System.Drawing.Size(163, 39)
+        Me.Ajouter.TabIndex = 3
+        Me.Ajouter.Text = "AJOUTER"
+        Me.Ajouter.UseVisualStyleBackColor = True
         '
         'Suppr
         '
@@ -98,29 +100,31 @@ Partial Class AC11
         Me.Modifier.Text = "MODIFIER"
         Me.Modifier.UseVisualStyleBackColor = True
         '
-        'DataSet1
-        '
-        Me.DataSet1.DataSetName = "DataSet1"
-        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'DataTable2TableAdapter
-        '
-        Me.DataTable2TableAdapter.ClearBeforeFill = True
-        '
-        'DataSet11
-        '
-        Me.DataSet11.DataSetName = "DataSet1"
-        Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'TableTournee
         '
         Me.TableTournee.AllowUserToAddRows = False
         Me.TableTournee.AllowUserToDeleteRows = False
         Me.TableTournee.AutoGenerateColumns = False
         Me.TableTournee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.ForestGreen
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Desktop
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.TableTournee.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.TableTournee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.TableTournee.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NTOURNEEDataGridViewTextBoxColumn, Me.NOMDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn1, Me.VEHICULEDataGridViewTextBoxColumn, Me.DEPARTDataGridViewTextBoxColumn, Me.ARRIVERDataGridViewTextBoxColumn})
         Me.TableTournee.DataSource = Me.DataTable2BindingSource
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.ForestGreen
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.TableTournee.DefaultCellStyle = DataGridViewCellStyle2
         Me.TableTournee.Location = New System.Drawing.Point(197, 87)
         Me.TableTournee.Name = "TableTournee"
         Me.TableTournee.ReadOnly = True
@@ -179,32 +183,46 @@ Partial Class AC11
         Me.DataSet1BindingSource.DataSource = Me.DataSet1
         Me.DataSet1BindingSource.Position = 0
         '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet1"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'DataTable2TableAdapter
+        '
+        Me.DataTable2TableAdapter.ClearBeforeFill = True
+        '
+        'DataSet11
+        '
+        Me.DataSet11.DataSetName = "DataSet1"
+        Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'AC11
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.ForestGreen
         Me.ClientSize = New System.Drawing.Size(1221, 541)
         Me.Controls.Add(Me.TableTournee)
         Me.Controls.Add(Me.Modifier)
         Me.Controls.Add(Me.Suppr)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Ajouter)
+        Me.Controls.Add(Me.Retour)
         Me.Controls.Add(Me.Label1)
         Me.Name = "AC11"
         Me.Text = "Form1"
         Me.TransparencyKey = System.Drawing.Color.Lime
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TableTournee, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataTable2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Retour As System.Windows.Forms.Button
+    Friend WithEvents Ajouter As System.Windows.Forms.Button
     Friend WithEvents Suppr As System.Windows.Forms.Button
     Friend WithEvents DataSet1 As PPE_mesguen.DataSet1
 
