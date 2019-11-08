@@ -35,6 +35,7 @@ Partial Class AC12
         Me.ButtonAnnulation = New System.Windows.Forms.Button()
         Me.IdEtape = New System.Windows.Forms.Label()
         Me.ButtonAjout = New System.Windows.Forms.Button()
+        Me.ChauffeurTableAdapter1 = New PPE_mesguen.DataSet1TableAdapters.CHAUFFEURTableAdapter()
         Me.SuspendLayout()
         '
         'DateTournee
@@ -153,6 +154,10 @@ Partial Class AC12
         Me.ButtonAjout.Text = "Ajouter"
         Me.ButtonAjout.UseVisualStyleBackColor = False
         '
+        'ChauffeurTableAdapter1
+        '
+        Me.ChauffeurTableAdapter1.ClearBeforeFill = True
+        '
         'AC12
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -190,4 +195,5 @@ Partial Class AC12
     Friend WithEvents ButtonAnnulation As System.Windows.Forms.Button
     Friend WithEvents IdEtape As System.Windows.Forms.Label
     Friend WithEvents ButtonAjout As System.Windows.Forms.Button
+    Friend WithEvents ChauffeurTableAdapter1 As PPE_mesguen.DataSet1TableAdapters.CHAUFFEURTableAdapter
 End Class
