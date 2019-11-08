@@ -36,8 +36,7 @@ Partial Class AC12
         Me.IdEtape = New System.Windows.Forms.Label()
         Me.ButtonAjout = New System.Windows.Forms.Button()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.DataSet11 = New PPE_mesguen.DataSet1()
-        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TextBoxCommentaire = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'DateTournee
@@ -159,21 +158,25 @@ Partial Class AC12
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(259, 122)
+        Me.ListBox1.Location = New System.Drawing.Point(255, 160)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(125, 17)
         Me.ListBox1.TabIndex = 13
         '
-        'DataSet11
+        'TextBoxCommentaire
         '
-        Me.DataSet11.DataSetName = "DataSet1"
-        Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.TextBoxCommentaire.Location = New System.Drawing.Point(114, 284)
+        Me.TextBoxCommentaire.Multiline = True
+        Me.TextBoxCommentaire.Name = "TextBoxCommentaire"
+        Me.TextBoxCommentaire.Size = New System.Drawing.Size(143, 71)
+        Me.TextBoxCommentaire.TabIndex = 14
         '
         'AC12
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(594, 438)
+        Me.Controls.Add(Me.TextBoxCommentaire)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.ButtonAjout)
         Me.Controls.Add(Me.IdEtape)
@@ -190,7 +193,6 @@ Partial Class AC12
         Me.Controls.Add(Me.DateTournee)
         Me.Name = "AC12"
         Me.Text = "AC12"
-        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -209,5 +211,5 @@ Partial Class AC12
     Friend WithEvents IdEtape As System.Windows.Forms.Label
     Friend WithEvents ButtonAjout As System.Windows.Forms.Button
     Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
-    Friend WithEvents DataSet11 As PPE_mesguen.DataSet1
+    Friend WithEvents TextBoxCommentaire As System.Windows.Forms.TextBox
 End Class
