@@ -25,6 +25,7 @@ Partial Class AC11
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AC11))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Retour = New System.Windows.Forms.Button()
         Me.Ajouter = New System.Windows.Forms.Button()
@@ -209,6 +210,7 @@ Partial Class AC11
         Me.Controls.Add(Me.Ajouter)
         Me.Controls.Add(Me.Retour)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "AC11"
         Me.Text = "Form1"
         Me.TransparencyKey = System.Drawing.Color.Lime
