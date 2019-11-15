@@ -27,15 +27,30 @@
         End Try
 
         'Affichage de la liste des noms des chauffeurs
-        'Aide: http://net-informations.com/q/faq/combovalue.html
-        Dim comboSource As New Dictionary(Of Integer, String)()
+        'Aide vb.net option value combobox: http://net-informations.com/q/faq/combovalue.html
+        ' Autre aides: https://www.developpez.net/forums/d201237/dotnet/developpement-windows/windows-forms/csharp-parcourir-items-d-combobox-remplir/
+        ' https://riptutorial.com/fr/vb-net/example/7085/create-a-dictionary-filled-with-values
 
+        Dim comboSource As New Dictionary(Of String, String)()
+        comboSource.Add("1", "Sunday")
+        comboSource.Add("2", "Monday")
+        comboSource.Add("3", "Tuesday")
+        comboSource.Add("4", "Wednesday")
+        comboSource.Add("5", "Thursday")
+        comboSource.Add("6", "Friday")
+        comboSource.Add("7", "Saturday")
         ListNomChauf.DataSource = New BindingSource(comboSource, Nothing)
         ListNomChauf.DisplayMember = "Value"
         ListNomChauf.ValueMember = "Key"
 
-        Dim key As String = DirectCast(ListNomChauf.SelectedItem, KeyValuePair(Of String, String)).Key
-        Dim value As Integer = DirectCast(ListNomChauf.SelectedItem, KeyValuePair(Of String, String)).Value
+
+
+        'ListNomChauf.DataSource = New BindingSource(comboSource, Nothing)
+        'ListNomChauf.DisplayMember = "Value"
+        'ListNomChauf.ValueMember = "Key"
+
+        'Dim key As String = DirectCast(ListNomChauf.SelectedItem, KeyValuePair(Of String, String)).Key
+        'Dim value As Integer = DirectCast(ListNomChauf.SelectedItem, KeyValuePair(Of String, String)).Value
 
 
         'Dim query As String = "SELECT CHFID,CHFNOM FROM CHAUFFEUR;"
