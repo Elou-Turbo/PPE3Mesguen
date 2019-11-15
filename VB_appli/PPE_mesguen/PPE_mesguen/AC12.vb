@@ -28,6 +28,16 @@
 
         'Affichage de la liste des noms des chauffeurs
         'Aide: http://net-informations.com/q/faq/combovalue.html
+        Dim comboSource As New Dictionary(Of Integer, String)()
+
+        ListNomChauf.DataSource = New BindingSource(comboSource, Nothing)
+        ListNomChauf.DisplayMember = "Value"
+        ListNomChauf.ValueMember = "Key"
+
+        Dim key As String = DirectCast(ListNomChauf.SelectedItem, KeyValuePair(Of String, String)).Key
+        Dim value As Integer = DirectCast(ListNomChauf.SelectedItem, KeyValuePair(Of String, String)).Value
+
+
         'Dim query As String = "SELECT CHFID,CHFNOM FROM CHAUFFEUR;"
         'donnee = New DataTable
         'myAdapter = New Odbc.OdbcDataAdapter(query, myConnection)
@@ -87,5 +97,8 @@
     Private Sub ButtonAjout_Click(sender As System.Object, e As System.EventArgs) Handles ButtonAjout.Click
 
     End Sub
+
+    'CONCERNNANT ETAPE
+    'etpid = Convert.ToString(TableTournee.CurrentRow.Cells.Item(0).Value)
 
 End Class
