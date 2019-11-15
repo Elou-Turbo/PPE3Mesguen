@@ -30,6 +30,8 @@
         'Aide vb.net option value combobox: http://net-informations.com/q/faq/combovalue.html
         ' Autre aides: https://www.developpez.net/forums/d201237/dotnet/developpement-windows/windows-forms/csharp-parcourir-items-d-combobox-remplir/
         ' https://riptutorial.com/fr/vb-net/example/7085/create-a-dictionary-filled-with-values
+        ' https://www.developpez.net/forums/d1518806/logiciels/microsoft-office/excel/macros-vba-excel/creation-d-dictionnaire-objet/
+
 
         Dim comboSource As New Dictionary(Of String, String)()
         comboSource.Add("1", "Sunday")
