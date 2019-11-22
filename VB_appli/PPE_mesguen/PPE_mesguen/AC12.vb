@@ -11,7 +11,7 @@
 
     Private Sub AC12_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         'TODO: cette ligne de code charge les données dans la table 'DataSet1.VEHICULE'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
-        'Me.VEHICULETableAdapter.Fill(Me.DataSet1.VEHICULE)
+        Me.VEHICULETableAdapter.Fill(Me.DataSet1.VEHICULE)
 
         'Connexion à la base MESGUEN
         connString = "Dsn=CNXORA_Mesguen;uid=u_mesguen;Pwd=estran;"
@@ -80,15 +80,15 @@
 
 
         'Affichage de la liste de l'immatriculation des véhicules
-        Dim queryVehi As String = "SELECT VEHIMMAT,VEHNOM FROM VEHICULE"
-        donnee = New DataTable
-        myAdapter = New Odbc.OdbcDataAdapter(query, myConnection)
-        myBuilder = New Odbc.OdbcCommandBuilder(myAdapter)
-        myAdapter.Fill(donnee)
+        'Dim queryVehi As String = "SELECT VEHIMMAT,VEHNOM FROM VEHICULE"
+        'donnee = New DataTable
+        'myAdapter = New Odbc.OdbcDataAdapter(query, myConnection)
+        'myBuilder = New Odbc.OdbcCommandBuilder(myAdapter)
+        'myAdapter.Fill(donnee)
 
-        ListImmat.DataSource = donnee
-        ListImmat.DisplayMember = "VEHIMMAT"
-        ListImmat.ValueMember = "VEHNOM"
+        'ListImmat.DataSource = donnee
+        'ListImmat.DisplayMember = "VEHIMMAT"
+        'ListImmat.ValueMember = "VEHIMMAT"
 
 
     End Sub
