@@ -22,7 +22,6 @@ Partial Class AC12
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.DateTournee = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.LabelChauf = New System.Windows.Forms.Label()
@@ -34,13 +33,11 @@ Partial Class AC12
         Me.ButtonAnnulation = New System.Windows.Forms.Button()
         Me.IdEtape = New System.Windows.Forms.Label()
         Me.ButtonAjout = New System.Windows.Forms.Button()
-        Me.TextBoxCommentaire = New System.Windows.Forms.TextBox()
+        Me.CommentaireTournee = New System.Windows.Forms.TextBox()
         Me.ListNomChauf = New System.Windows.Forms.ComboBox()
         Me.ListImmat = New System.Windows.Forms.ComboBox()
-        Me.VEHICULEBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet1 = New PPE_mesguen.DataSet1()
-        Me.VEHICULETableAdapter = New PPE_mesguen.DataSet1TableAdapters.VEHICULETableAdapter()
-        CType(Me.VEHICULEBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -144,13 +141,13 @@ Partial Class AC12
         Me.ButtonAjout.Text = "Ajouter"
         Me.ButtonAjout.UseVisualStyleBackColor = False
         '
-        'TextBoxCommentaire
+        'CommentaireTournee
         '
-        Me.TextBoxCommentaire.Location = New System.Drawing.Point(114, 284)
-        Me.TextBoxCommentaire.Multiline = True
-        Me.TextBoxCommentaire.Name = "TextBoxCommentaire"
-        Me.TextBoxCommentaire.Size = New System.Drawing.Size(143, 71)
-        Me.TextBoxCommentaire.TabIndex = 14
+        Me.CommentaireTournee.Location = New System.Drawing.Point(114, 284)
+        Me.CommentaireTournee.Multiline = True
+        Me.CommentaireTournee.Name = "CommentaireTournee"
+        Me.CommentaireTournee.Size = New System.Drawing.Size(143, 71)
+        Me.CommentaireTournee.TabIndex = 14
         '
         'ListNomChauf
         '
@@ -162,38 +159,34 @@ Partial Class AC12
         '
         'ListImmat
         '
-        Me.ListImmat.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.VEHICULEBindingSource, "VEHIMMAT", True))
-        Me.ListImmat.DataSource = Me.VEHICULEBindingSource
-        Me.ListImmat.DisplayMember = "VEHIMMAT"
         Me.ListImmat.FormattingEnabled = True
         Me.ListImmat.Location = New System.Drawing.Point(115, 201)
         Me.ListImmat.Name = "ListImmat"
         Me.ListImmat.Size = New System.Drawing.Size(93, 21)
         Me.ListImmat.TabIndex = 16
-        Me.ListImmat.ValueMember = "VEHIMMAT"
-        '
-        'VEHICULEBindingSource
-        '
-        Me.VEHICULEBindingSource.DataMember = "VEHICULE"
-        Me.VEHICULEBindingSource.DataSource = Me.DataSet1
         '
         'DataSet1
         '
         Me.DataSet1.DataSetName = "DataSet1"
         Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'VEHICULETableAdapter
+        'ListBox1
         '
-        Me.VEHICULETableAdapter.ClearBeforeFill = True
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(318, 123)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(94, 17)
+        Me.ListBox1.TabIndex = 17
         '
         'AC12
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(594, 438)
+        Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.ListImmat)
         Me.Controls.Add(Me.ListNomChauf)
-        Me.Controls.Add(Me.TextBoxCommentaire)
+        Me.Controls.Add(Me.CommentaireTournee)
         Me.Controls.Add(Me.ButtonAjout)
         Me.Controls.Add(Me.IdEtape)
         Me.Controls.Add(Me.ButtonAnnulation)
@@ -207,7 +200,6 @@ Partial Class AC12
         Me.Controls.Add(Me.DateTournee)
         Me.Name = "AC12"
         Me.Text = "AC12"
-        CType(Me.VEHICULEBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -224,10 +216,9 @@ Partial Class AC12
     Friend WithEvents ButtonAnnulation As System.Windows.Forms.Button
     Friend WithEvents IdEtape As System.Windows.Forms.Label
     Friend WithEvents ButtonAjout As System.Windows.Forms.Button
-    Friend WithEvents TextBoxCommentaire As System.Windows.Forms.TextBox
+    Friend WithEvents CommentaireTournee As System.Windows.Forms.TextBox
     Friend WithEvents ListNomChauf As System.Windows.Forms.ComboBox
     Friend WithEvents ListImmat As System.Windows.Forms.ComboBox
     Friend WithEvents DataSet1 As PPE_mesguen.DataSet1
-    Friend WithEvents VEHICULEBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents VEHICULETableAdapter As PPE_mesguen.DataSet1TableAdapters.VEHICULETableAdapter
+    Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
 End Class
