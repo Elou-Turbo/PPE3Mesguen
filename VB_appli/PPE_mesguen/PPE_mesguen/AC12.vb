@@ -10,8 +10,10 @@
     Dim ds As DataSet
 
     Private Sub AC12_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        'TODO: cette ligne de code charge les données dans la table 'DataSet1.ETAPE'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
+        Me.ETAPETableAdapter.Fill(Me.DataSet1.ETAPE)
         'TODO: cette ligne de code charge les données dans la table 'DataSet1.VEHICULE'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
-        Me.VEHICULETableAdapter.Fill(Me.DataSet1.VEHICULE)
+        'Me.VEHICULETableAdapter.Fill(Me.DataSet1.VEHICULE)
 
         'Connexion à la base MESGUEN
         connString = "Dsn=CNXORA_Mesguen;uid=u_mesguen;Pwd=estran;"
@@ -80,15 +82,15 @@
 
 
         'Affichage de la liste de l'immatriculation des véhicules
-        'Dim queryVehi As String = "SELECT VEHIMMAT,VEHNOM FROM VEHICULE"
-        'donnee = New DataTable
-        'myAdapter = New Odbc.OdbcDataAdapter(query, myConnection)
-        'myBuilder = New Odbc.OdbcCommandBuilder(myAdapter)
-        'myAdapter.Fill(donnee)
+        Dim queryVehi As String = "SELECT VEHIMMAT FROM VEHICULE"
+        Dim donneeVehi As DataTable = New DataTable
+        Dim myAdapterVehi As Odbc.OdbcDataAdapter = New Odbc.OdbcDataAdapter(queryVehi, myConnection)
+        myBuilder = New Odbc.OdbcCommandBuilder(myAdapterVehi)
+        myAdapterVehi.Fill(donneeVehi)
 
-        'ListImmat.DataSource = donnee
-        'ListImmat.DisplayMember = "VEHIMMAT"
-        'ListImmat.ValueMember = "VEHIMMAT"
+        ListImmat.DataSource = donneeVehi
+        ListImmat.DisplayMember = "VEHIMMAT"
+        ListImmat.ValueMember = "VEHIMMAT"
 
 
     End Sub
@@ -128,6 +130,9 @@
 
     Private Sub ButtonAjout_Click(sender As System.Object, e As System.EventArgs) Handles ButtonAjout.Click
 
+        'ButtonAjout.ImageList =
+        'ButtonAjout.ImageAlign = ContentAlignment.MiddleLeft
+
     End Sub
 
     'CONCERNNANT ETAPE
@@ -135,4 +140,7 @@
 
 
 
+    Private Sub CommentaireTournee_TextChanged(sender As System.Object, e As System.EventArgs) Handles CommentaireTournee.TextChanged
+
+    End Sub
 End Class
