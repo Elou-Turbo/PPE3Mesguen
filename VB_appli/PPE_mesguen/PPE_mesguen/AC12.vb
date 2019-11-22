@@ -10,8 +10,6 @@
     Dim ds As DataSet
 
     Private Sub AC12_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        'TODO: cette ligne de code charge les données dans la table 'DataSet1.ETAPE'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
-        Me.ETAPETableAdapter.Fill(Me.DataSet1.ETAPE)
         'TODO: cette ligne de code charge les données dans la table 'DataSet1.VEHICULE'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
         'Me.VEHICULETableAdapter.Fill(Me.DataSet1.VEHICULE)
 
@@ -81,7 +79,7 @@
         ListNomChauf.ValueMember = "CHFID"
 
 
-        'Affichage de la liste de l'immatriculation des véhicules
+        'Affichage de la liste de l'immatriculation des vehicules
         Dim queryVehi As String = "SELECT VEHIMMAT FROM VEHICULE"
         Dim donneeVehi As DataTable = New DataTable
         Dim myAdapterVehi As Odbc.OdbcDataAdapter = New Odbc.OdbcDataAdapter(queryVehi, myConnection)
@@ -92,6 +90,27 @@
         ListImmat.DisplayMember = "VEHIMMAT"
         ListImmat.ValueMember = "VEHIMMAT"
 
+        'Affiche les commentaires provenant de la table tournee
+        Dim queryComment As String = "SELECT TRNCOMMENTAIRE, TRNNUM FROM TOURNEE WHERE TRNNUM = 2;"
+        Dim donneeComment As DataTable = New DataTable
+        Dim myAdapterComment As Odbc.OdbcDataAdapter = New Odbc.OdbcDataAdapter(queryComment, myConnection)
+        myBuilder = New Odbc.OdbcCommandBuilder(myAdapterComment)
+        myAdapterComment.Fill(donneeComment)
+
+        ListImmat.DataSource = donneeComment
+        ListImmat.DisplayMember = "TRNCOMMENTAIRE"
+        ListImmat.ValueMember = "TRNNUM"
+
+        'Affichage de la liste des lieux a selectionner pour l'etape
+        Dim queryLieuEtp As String = "SELECT ETAPE.LIEUID, LIEUNOM FROM ETAPE, LIEU WHERE ETAPE.LIEUID = LIEU.LIEUID;"
+        Dim donneeLieuEtp As DataTable = New DataTable
+        Dim myAdapterLieuEtp As Odbc.OdbcDataAdapter = New Odbc.OdbcDataAdapter(queryLieuEtp, myConnection)
+        myBuilder = New Odbc.OdbcCommandBuilder(myAdapterLieuEtp)
+        myAdapterLieuEtp.Fill(donneeLieuEtp)
+
+        ListBoxLieuEtape.DataSource = donneeLieuEtp
+        ListBoxLieuEtape.DisplayMember = "LIEUNOM"
+        ListBoxLieuEtape.ValueMember = "ETAPE.LIEUID"
 
     End Sub
 
@@ -141,6 +160,12 @@
 
 
     Private Sub CommentaireTournee_TextChanged(sender As System.Object, e As System.EventArgs) Handles CommentaireTournee.TextChanged
+
+
+    End Sub
+
+    Private Sub ListBoxLieuEtape_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ListBoxLieuEtape.SelectedIndexChanged
+
 
     End Sub
 End Class
