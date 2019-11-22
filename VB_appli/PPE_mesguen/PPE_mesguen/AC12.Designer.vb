@@ -163,11 +163,14 @@ Partial Class AC12
         'ListImmat
         '
         Me.ListImmat.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.VEHICULEBindingSource, "VEHIMMAT", True))
+        Me.ListImmat.DataSource = Me.VEHICULEBindingSource
+        Me.ListImmat.DisplayMember = "VEHIMMAT"
         Me.ListImmat.FormattingEnabled = True
         Me.ListImmat.Location = New System.Drawing.Point(115, 201)
         Me.ListImmat.Name = "ListImmat"
         Me.ListImmat.Size = New System.Drawing.Size(93, 21)
         Me.ListImmat.TabIndex = 16
+        Me.ListImmat.ValueMember = "VEHIMMAT"
         '
         'VEHICULEBindingSource
         '
