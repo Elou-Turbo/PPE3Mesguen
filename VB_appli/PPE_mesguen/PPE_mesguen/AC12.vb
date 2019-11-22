@@ -11,7 +11,7 @@
 
     Private Sub AC12_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         'TODO: cette ligne de code charge les données dans la table 'DataSet1.VEHICULE'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
-        Me.VEHICULETableAdapter.Fill(Me.DataSet1.VEHICULE)
+        'Me.VEHICULETableAdapter.Fill(Me.DataSet1.VEHICULE)
 
         'Connexion à la base MESGUEN
         connString = "Dsn=CNXORA_Mesguen;uid=u_mesguen;Pwd=estran;"
@@ -26,24 +26,37 @@
             MessageBox.Show(ex.Message)
         End Try
 
-        'Affichage de la liste des noms des chauffeurs
-        'Aide vb.net option value combobox: http://net-informations.com/q/faq/combovalue.html
-        ' Autre aides: https://www.developpez.net/forums/d201237/dotnet/developpement-windows/windows-forms/csharp-parcourir-items-d-combobox-remplir/
-        ' https://riptutorial.com/fr/vb-net/example/7085/create-a-dictionary-filled-with-values
-        ' https://www.developpez.net/forums/d1518806/logiciels/microsoft-office/excel/macros-vba-excel/creation-d-dictionnaire-objet/
+    
+
+    'Affichage de la liste des noms des chauffeurs
+    'Aide vb.net option value combobox: http://net-informations.com/q/faq/combovalue.html
+    ' Autre aides: https://www.developpez.net/forums/d201237/dotnet/developpement-windows/windows-forms/csharp-parcourir-items-d-combobox-remplir/
+    ' https://riptutorial.com/fr/vb-net/example/7085/create-a-dictionary-filled-with-values
+    ' https://www.developpez.net/forums/d1518806/logiciels/microsoft-office/excel/macros-vba-excel/creation-d-dictionnaire-objet/
 
 
-        Dim comboSource As New Dictionary(Of String, String)()
-        comboSource.Add("1", "Sunday")
-        comboSource.Add("2", "Monday")
-        comboSource.Add("3", "Tuesday")
-        comboSource.Add("4", "Wednesday")
-        comboSource.Add("5", "Thursday")
-        comboSource.Add("6", "Friday")
-        comboSource.Add("7", "Saturday")
-        ListNomChauf.DataSource = New BindingSource(comboSource, Nothing)
-        ListNomChauf.DisplayMember = "Value"
-        ListNomChauf.ValueMember = "Key"
+        'Dim comboSource As New Dictionary(Of Integer, String)()
+
+
+        'Dim myReader As Odbc.OdbcDataReader = myCommand.ExecuteReader()
+
+        'If myReader.Read() Then
+        '    Console.WriteLine(myReader("CHFID").ToString)
+        '    Else
+        '    Console.WriteLine("PB")
+        '    End If
+        'comboSource.Add()
+
+        'comboSource.Add("1", "Sunday")
+        'comboSource.Add("2", "Monday")
+        'comboSource.Add("3", "Tuesday")
+        'comboSource.Add("4", "Wednesday")
+        'comboSource.Add("5", "Thursday")
+        'comboSource.Add("6", "Friday")
+        'comboSource.Add("7", "Saturday")
+        'ListNomChauf.DataSource = New BindingSource(comboSource, Nothing)
+        'ListNomChauf.DisplayMember = "Value"
+        'ListNomChauf.ValueMember = "Key"
 
 
 
@@ -54,27 +67,29 @@
         'Dim key As String = DirectCast(ListNomChauf.SelectedItem, KeyValuePair(Of String, String)).Key
         'Dim value As Integer = DirectCast(ListNomChauf.SelectedItem, KeyValuePair(Of String, String)).Value
 
+        'Affichage liste des noms des chauffeurs
+        Dim query As String = "SELECT CHFID,CHFNOM FROM CHAUFFEUR;"
+        donnee = New DataTable
+        myAdapter = New Odbc.OdbcDataAdapter(query, myConnection)
+        myBuilder = New Odbc.OdbcCommandBuilder(myAdapter)
+        myAdapter.Fill(donnee)
 
-        'Dim query As String = "SELECT CHFID,CHFNOM FROM CHAUFFEUR;"
-        'donnee = New DataTable
-        'myAdapter = New Odbc.OdbcDataAdapter(query, myConnection)
-        'myBuilder = New Odbc.OdbcCommandBuilder(myAdapter)
-
-        'ListNomChauf.DataSource = donnee
-        'ListNomChauf.DisplayMember = "CHFNOM"
-        'ListNomChauf.ValueMember = "CHFID"
+        ListNomChauf.DataSource = donnee
+        ListNomChauf.DisplayMember = "CHFNOM"
+        ListNomChauf.ValueMember = "CHFID"
 
 
-        'Affichage de la liste des chauffeurs
-        'Dim query As String = "SELECT VEHIMMAT FROM VEHICULE"
-        'donnee = New DataTable
-        'myAdapter = New Odbc.OdbcDataAdapter(query, myConnection)
-        'myBuilder = New Odbc.OdbcCommandBuilder(myAdapter)
+        'Affichage de la liste de l'immatriculation des véhicules
+        Dim queryVehi As String = "SELECT VEHIMMAT,VEHNOM FROM VEHICULE"
+        donnee = New DataTable
+        myAdapter = New Odbc.OdbcDataAdapter(query, myConnection)
+        myBuilder = New Odbc.OdbcCommandBuilder(myAdapter)
+        myAdapter.Fill(donnee)
 
-        'ListImmatVehi.DataSource = donnee
-        'ListImmatVehi.DisplayMember = "VEHIMMAT"
-        'ListImmatVehi.ValueMember = "VEHIMMAT"
-       
+        ListImmat.DataSource = donnee
+        ListImmat.DisplayMember = "VEHIMMAT"
+        ListImmat.ValueMember = "VEHNOM"
+
 
     End Sub
 
@@ -117,5 +132,7 @@
 
     'CONCERNNANT ETAPE
     'etpid = Convert.ToString(TableTournee.CurrentRow.Cells.Item(0).Value)
+
+
 
 End Class
