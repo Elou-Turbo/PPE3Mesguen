@@ -37,7 +37,7 @@ Partial Class AC12
         Me.ListNomChauf = New System.Windows.Forms.ComboBox()
         Me.ListImmat = New System.Windows.Forms.ComboBox()
         Me.DataSet1 = New PPE_mesguen.DataSet1()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.ListBoxLieuEtape = New System.Windows.Forms.ListBox()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -170,20 +170,20 @@ Partial Class AC12
         Me.DataSet1.DataSetName = "DataSet1"
         Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'ListBox1
+        'ListBoxLieuEtape
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(318, 123)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(94, 17)
-        Me.ListBox1.TabIndex = 17
+        Me.ListBoxLieuEtape.FormattingEnabled = True
+        Me.ListBoxLieuEtape.Location = New System.Drawing.Point(318, 123)
+        Me.ListBoxLieuEtape.Name = "ListBoxLieuEtape"
+        Me.ListBoxLieuEtape.Size = New System.Drawing.Size(94, 17)
+        Me.ListBoxLieuEtape.TabIndex = 17
         '
         'AC12
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(594, 438)
-        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.ListBoxLieuEtape)
         Me.Controls.Add(Me.ListImmat)
         Me.Controls.Add(Me.ListNomChauf)
         Me.Controls.Add(Me.CommentaireTournee)
@@ -220,5 +220,5 @@ Partial Class AC12
     Friend WithEvents ListNomChauf As System.Windows.Forms.ComboBox
     Friend WithEvents ListImmat As System.Windows.Forms.ComboBox
     Friend WithEvents DataSet1 As PPE_mesguen.DataSet1
-    Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
+    Friend WithEvents ListBoxLieuEtape As System.Windows.Forms.ListBox
 End Class
