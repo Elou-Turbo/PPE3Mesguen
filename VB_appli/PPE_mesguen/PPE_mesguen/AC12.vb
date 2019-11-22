@@ -36,8 +36,6 @@
 
 
         'Dim comboSource As New Dictionary(Of Integer, String)()
-
-
         'Dim myReader As Odbc.OdbcDataReader = myCommand.ExecuteReader()
 
         'If myReader.Read() Then
@@ -90,27 +88,30 @@
         ListImmat.DisplayMember = "VEHIMMAT"
         ListImmat.ValueMember = "VEHIMMAT"
 
+        'TO DO AFFICHAGE DES COMMENTAIRES DEJA PRESENT DANS LA BASE
         'Affiche les commentaires provenant de la table tournee
-        Dim queryComment As String = "SELECT TRNCOMMENTAIRE, TRNNUM FROM TOURNEE WHERE TRNNUM = 2;"
-        Dim donneeComment As DataTable = New DataTable
-        Dim myAdapterComment As Odbc.OdbcDataAdapter = New Odbc.OdbcDataAdapter(queryComment, myConnection)
-        myBuilder = New Odbc.OdbcCommandBuilder(myAdapterComment)
-        myAdapterComment.Fill(donneeComment)
+        'Dim queryComment As String = "SELECT TRNCOMMENTAIRE, TRNNUM FROM TOURNEE WHERE TRNNUM = 2;"
+        'Dim donneeComment As DataTable = New DataTable
+        'Dim myAdapterComment As Odbc.OdbcDataAdapter = New Odbc.OdbcDataAdapter(queryComment, myConnection)
+        'myBuilder = New Odbc.OdbcCommandBuilder(myAdapterComment)
+        'myAdapterComment.Fill(donneeComment)
 
-        ListImmat.DataSource = donneeComment
-        ListImmat.DisplayMember = "TRNCOMMENTAIRE"
-        ListImmat.ValueMember = "TRNNUM"
+        'ListImmat.DataSource = donneeComment
+        'ListImmat.DisplayMember = "TRNCOMMENTAIRE"
+        'ListImmat.ValueMember = "TRNNUM"
 
         'Affichage de la liste des lieux a selectionner pour l'etape
-        Dim queryLieuEtp As String = "SELECT ETAPE.LIEUID, LIEUNOM FROM ETAPE, LIEU WHERE ETAPE.LIEUID = LIEU.LIEUID;"
+        Dim etpid As String
+        etpid = Convert.ToString(TableTournee.CurrentRow.Cells.Item(0).Value)
+        Dim queryLieuEtp As String = "SELECT ETAPE.LIEUID, LIEUNOM FROM ETAPE, LIEU, TOURNEE WHERE ETAPE.LIEUID = LIEU.LIEUID AND ETAPE.TRNNUM = TOURNEE.TRNNUM AND TOURNEE.TRNNUM= 1;"
         Dim donneeLieuEtp As DataTable = New DataTable
         Dim myAdapterLieuEtp As Odbc.OdbcDataAdapter = New Odbc.OdbcDataAdapter(queryLieuEtp, myConnection)
         myBuilder = New Odbc.OdbcCommandBuilder(myAdapterLieuEtp)
         myAdapterLieuEtp.Fill(donneeLieuEtp)
 
-        ListBoxLieuEtape.DataSource = donneeLieuEtp
-        ListBoxLieuEtape.DisplayMember = "LIEUNOM"
-        ListBoxLieuEtape.ValueMember = "ETAPE.LIEUID"
+        ListLieuEtape.DataSource = donneeLieuEtp
+        'ListLieuEtape.DisplayMember = "LIEUNOM"
+        'ListLieuEtape.ValueMember = "LIEUID"
 
     End Sub
 
@@ -149,6 +150,10 @@
 
     Private Sub ButtonAjout_Click(sender As System.Object, e As System.EventArgs) Handles ButtonAjout.Click
 
+        'Retour à l'écran précédent AC11
+        'AC13.Show()
+        Me.Hide()
+
         'ButtonAjout.ImageList =
         'ButtonAjout.ImageAlign = ContentAlignment.MiddleLeft
 
@@ -164,8 +169,7 @@
 
     End Sub
 
-    Private Sub ListBoxLieuEtape_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ListBoxLieuEtape.SelectedIndexChanged
-
+    Private Sub ListLieuEtape_CellContentClick(sender As System.Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles ListLieuEtape.CellContentClick
 
     End Sub
 End Class
