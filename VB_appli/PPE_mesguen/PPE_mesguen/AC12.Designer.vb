@@ -37,11 +37,11 @@ Partial Class AC12
         Me.TextBoxCommentaire = New System.Windows.Forms.TextBox()
         Me.ListNomChauf = New System.Windows.Forms.ComboBox()
         Me.ListImmat = New System.Windows.Forms.ComboBox()
-        Me.DataSet1 = New PPE_mesguen.DataSet1()
         Me.VEHICULEBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet1 = New PPE_mesguen.DataSet1()
         Me.VEHICULETableAdapter = New PPE_mesguen.DataSet1TableAdapters.VEHICULETableAdapter()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VEHICULEBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DateTournee
@@ -163,24 +163,21 @@ Partial Class AC12
         'ListImmat
         '
         Me.ListImmat.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.VEHICULEBindingSource, "VEHIMMAT", True))
-        Me.ListImmat.DataSource = Me.VEHICULEBindingSource
-        Me.ListImmat.DisplayMember = "VEHIMMAT"
         Me.ListImmat.FormattingEnabled = True
         Me.ListImmat.Location = New System.Drawing.Point(115, 201)
         Me.ListImmat.Name = "ListImmat"
         Me.ListImmat.Size = New System.Drawing.Size(93, 21)
         Me.ListImmat.TabIndex = 16
-        Me.ListImmat.ValueMember = "VEHIMMAT"
-        '
-        'DataSet1
-        '
-        Me.DataSet1.DataSetName = "DataSet1"
-        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'VEHICULEBindingSource
         '
         Me.VEHICULEBindingSource.DataMember = "VEHICULE"
         Me.VEHICULEBindingSource.DataSource = Me.DataSet1
+        '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet1"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'VEHICULETableAdapter
         '
@@ -207,8 +204,8 @@ Partial Class AC12
         Me.Controls.Add(Me.DateTournee)
         Me.Name = "AC12"
         Me.Text = "AC12"
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VEHICULEBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
