@@ -143,8 +143,9 @@
 
     Private Sub ButtonAnnulation_Click(sender As System.Object, e As System.EventArgs) Handles ButtonAnnulation.Click
         'Retour à l'écran précédent AC11
-        AC11.Show()
-        Me.Hide()
+        'AC11.Show()
+        'Me.Hide()
+        Me.Close()
 
     End Sub
 
