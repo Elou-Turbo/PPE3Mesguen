@@ -31,6 +31,7 @@ Partial Class AC11
         Me.VEHICULEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DEPARTDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ARRIVERDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.degats = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataTable2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet1 = New PPE_mesguen.DataSet1()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -40,7 +41,6 @@ Partial Class AC11
         Me.Modifier = New System.Windows.Forms.Button()
         Me.DataTable2TableAdapter = New PPE_mesguen.DataSet1TableAdapters.DataTable2TableAdapter()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.degats = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.TableTournee, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataTable2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -103,6 +103,13 @@ Partial Class AC11
         Me.ARRIVERDataGridViewTextBoxColumn.HeaderText = "ARRIVER"
         Me.ARRIVERDataGridViewTextBoxColumn.Name = "ARRIVERDataGridViewTextBoxColumn"
         Me.ARRIVERDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'degats
+        '
+        Me.degats.DataPropertyName = "N° TOURNEE"
+        Me.degats.HeaderText = "DEGATS"
+        Me.degats.Name = "degats"
+        Me.degats.ReadOnly = True
         '
         'DataTable2BindingSource
         '
@@ -178,13 +185,6 @@ Partial Class AC11
         Me.Button4.TabIndex = 6
         Me.Button4.Text = "VOIR LES DEGATS"
         Me.Button4.UseVisualStyleBackColor = True
-        '
-        'degats
-        '
-        Me.degats.DataPropertyName = "N° TOURNEE"
-        Me.degats.HeaderText = "DEGATS"
-        Me.degats.Name = "degats"
-        Me.degats.ReadOnly = True
         '
         'AC11
         '
