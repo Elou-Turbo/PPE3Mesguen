@@ -68,7 +68,7 @@
 
 
     Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
-        'AC12.show()
+        AC12.show()
     End Sub
 
     'Private Sub Button3_Click(sender As System.Object, e As System.EventArgs) Handles Button3.Click

@@ -28,10 +28,7 @@ Partial Class Form1
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.OuvrirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.SupprimerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DéfinirEnTantQuarrièrePlanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.QuiterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -65,43 +62,25 @@ Partial Class Form1
         '
         'ContextMenuStrip1
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OuvrirToolStripMenuItem, Me.ToolStripMenuItem1, Me.SupprimerToolStripMenuItem, Me.DéfinirEnTantQuarrièrePlanToolStripMenuItem, Me.ToolStripMenuItem2, Me.QuiterToolStripMenuItem})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OuvrirToolStripMenuItem, Me.ToolStripMenuItem1, Me.ToolStripMenuItem2})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(229, 104)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(153, 60)
         '
         'OuvrirToolStripMenuItem
         '
         Me.OuvrirToolStripMenuItem.Name = "OuvrirToolStripMenuItem"
-        Me.OuvrirToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+        Me.OuvrirToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.OuvrirToolStripMenuItem.Text = "Ouvrir"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(225, 6)
-        '
-        'SupprimerToolStripMenuItem
-        '
-        Me.SupprimerToolStripMenuItem.Name = "SupprimerToolStripMenuItem"
-        Me.SupprimerToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
-        Me.SupprimerToolStripMenuItem.Text = "Supprimer"
-        '
-        'DéfinirEnTantQuarrièrePlanToolStripMenuItem
-        '
-        Me.DéfinirEnTantQuarrièrePlanToolStripMenuItem.Name = "DéfinirEnTantQuarrièrePlanToolStripMenuItem"
-        Me.DéfinirEnTantQuarrièrePlanToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
-        Me.DéfinirEnTantQuarrièrePlanToolStripMenuItem.Text = "Définir en tant qu'arrière plan"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(149, 6)
         '
         'ToolStripMenuItem2
         '
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(225, 6)
-        '
-        'QuiterToolStripMenuItem
-        '
-        Me.QuiterToolStripMenuItem.Name = "QuiterToolStripMenuItem"
-        Me.QuiterToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
-        Me.QuiterToolStripMenuItem.Text = "Quitter"
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(149, 6)
         '
         'Button1
         '
@@ -159,9 +138,6 @@ Partial Class Form1
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents OuvrirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem1 As ToolStripSeparator
-    Friend WithEvents SupprimerToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DéfinirEnTantQuarrièrePlanToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem2 As ToolStripSeparator
-    Friend WithEvents QuiterToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Button3 As System.Windows.Forms.Button
 End Class

@@ -40,6 +40,7 @@ Partial Class AC11
         Me.Modifier = New System.Windows.Forms.Button()
         Me.DataTable2TableAdapter = New PPE_mesguen.DataSet1TableAdapters.DataTable2TableAdapter()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.degats = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.TableTournee, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataTable2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,7 +54,7 @@ Partial Class AC11
         Me.TableTournee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.TableTournee.BackgroundColor = System.Drawing.Color.White
         Me.TableTournee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.TableTournee.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NTOURNEEDataGridViewTextBoxColumn, Me.NOMDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn1, Me.VEHICULEDataGridViewTextBoxColumn, Me.DEPARTDataGridViewTextBoxColumn, Me.ARRIVERDataGridViewTextBoxColumn})
+        Me.TableTournee.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NTOURNEEDataGridViewTextBoxColumn, Me.NOMDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn1, Me.VEHICULEDataGridViewTextBoxColumn, Me.DEPARTDataGridViewTextBoxColumn, Me.ARRIVERDataGridViewTextBoxColumn, Me.degats})
         Me.TableTournee.DataSource = Me.DataTable2BindingSource
         Me.TableTournee.Location = New System.Drawing.Point(171, 81)
         Me.TableTournee.Name = "TableTournee"
@@ -178,6 +179,13 @@ Partial Class AC11
         Me.Button4.Text = "VOIR LES DEGATS"
         Me.Button4.UseVisualStyleBackColor = True
         '
+        'degats
+        '
+        Me.degats.DataPropertyName = "N° TOURNEE"
+        Me.degats.HeaderText = "DEGATS"
+        Me.degats.Name = "degats"
+        Me.degats.ReadOnly = True
+        '
         'AC11
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -220,5 +228,6 @@ End Sub
     Friend WithEvents DEPARTDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ARRIVERDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents degats As System.Windows.Forms.DataGridViewTextBoxColumn
 
 End Class
