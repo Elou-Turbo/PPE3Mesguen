@@ -31,13 +31,13 @@ Partial Class AC11
         Me.Suppr = New System.Windows.Forms.Button()
         Me.Modifier = New System.Windows.Forms.Button()
         Me.TableTournee = New System.Windows.Forms.DataGridView()
+        Me.DataTable2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.NTOURNEEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NOMDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.VEHICULEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DEPARTDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ARRIVERDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataTable2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet1 = New PPE_mesguen.DataSet1()
         Me.DataTable2TableAdapter = New PPE_mesguen.DataSet1TableAdapters.DataTable2TableAdapter()
@@ -131,6 +131,11 @@ Partial Class AC11
         Me.TableTournee.Size = New System.Drawing.Size(803, 337)
         Me.TableTournee.TabIndex = 6
         '
+        'DataTable2BindingSource
+        '
+        Me.DataTable2BindingSource.DataMember = "DataTable2"
+        Me.DataTable2BindingSource.DataSource = Me.DataSet1BindingSource
+        '
         'NTOURNEEDataGridViewTextBoxColumn
         '
         Me.NTOURNEEDataGridViewTextBoxColumn.DataPropertyName = "N° TOURNEE"
@@ -173,11 +178,6 @@ Partial Class AC11
         Me.ARRIVERDataGridViewTextBoxColumn.Name = "ARRIVERDataGridViewTextBoxColumn"
         Me.ARRIVERDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataTable2BindingSource
-        '
-        Me.DataTable2BindingSource.DataMember = "DataTable2"
-        Me.DataTable2BindingSource.DataSource = Me.DataSet1BindingSource
-        '
         'DataSet1BindingSource
         '
         Me.DataSet1BindingSource.DataSource = Me.DataSet1
@@ -201,7 +201,7 @@ Partial Class AC11
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.ForestGreen
+        Me.BackColor = System.Drawing.Color.Green
         Me.ClientSize = New System.Drawing.Size(1221, 541)
         Me.Controls.Add(Me.TableTournee)
         Me.Controls.Add(Me.Modifier)

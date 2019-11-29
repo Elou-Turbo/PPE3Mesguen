@@ -30,6 +30,7 @@
     Private Sub Suppr_Click(sender As System.Object, e As System.EventArgs) Handles Suppr.Click
         Dim ans As String
         Dim data As String
+
         data = Convert.ToString(TableTournee.CurrentRow.Cells.Item(0).Value)
         ans = MsgBox("Confirmé la suppression de la tournée N° " & data, vbYesNo)
         If ans = vbYes Then

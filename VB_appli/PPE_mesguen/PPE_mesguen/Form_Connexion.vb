@@ -9,6 +9,9 @@
     Private Sub Connexion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
 
         If (TextBox_pass.Text = "phicorp29") And (TextBox_Login.Text = "phicorp29") Then
+            connString = "DSN=CNXORA_Mesguen;Uid=u_Mesguen;Pwd=estran;"
+            connexionSQL.ConnectionString = connString
+            connexionSQL.Open()
             AC11.Show()
             Me.Hide()
         Else
@@ -25,5 +28,7 @@
     Private Sub Form_Connexion_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
 
     End Sub
+
+ 
 End Class
 
