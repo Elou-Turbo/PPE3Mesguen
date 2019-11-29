@@ -101,4 +101,12 @@ Public Class Form1
             PictureBox1.Location = New Point(0, 0)
         End If
     End Sub
+
+    Private Sub Button3_Click(sender As System.Object, e As System.EventArgs)
+
+    End Sub
+
+    Private Sub Button3_Click_1(sender As System.Object, e As System.EventArgs) Handles Button3.Click
+        Me.Close()
+    End Sub
 End Class
