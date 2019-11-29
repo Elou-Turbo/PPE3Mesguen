@@ -110,6 +110,12 @@
     <Compile Include="DataSet1.vb">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_Connexion.Designer.vb">
       <DependentUpon>Form_Connexion.vb</DependentUpon>
     </Compile>
@@ -135,6 +141,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AC11.resx">
       <DependentUpon>AC11.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Connexion.resx">
       <DependentUpon>Form_Connexion.vb</DependentUpon>

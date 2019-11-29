@@ -69,6 +69,7 @@ Partial Class Form_Connexion
         Me.TextBox_Login.Name = "TextBox_Login"
         Me.TextBox_Login.Size = New System.Drawing.Size(297, 31)
         Me.TextBox_Login.TabIndex = 7
+        Me.TextBox_Login.Text = "phicorp29"
         '
         'TextBox_pass
         '
@@ -77,6 +78,7 @@ Partial Class Form_Connexion
         Me.TextBox_pass.Name = "TextBox_pass"
         Me.TextBox_pass.Size = New System.Drawing.Size(297, 31)
         Me.TextBox_pass.TabIndex = 6
+        Me.TextBox_pass.Text = "phicorp29"
         Me.TextBox_pass.UseSystemPasswordChar = True
         '
         'Button1
