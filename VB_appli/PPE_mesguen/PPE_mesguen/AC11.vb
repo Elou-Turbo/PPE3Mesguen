@@ -71,12 +71,12 @@
         AC12.Show()
     End Sub
 
-    'Private Sub Button3_Click(sender As System.Object, e As System.EventArgs) Handles Button3.Click
-    '    Dim trnum As Integer
-    '    trnum = TableTournee.CurrentRow.Cells.Item(0).Value
-    '    myCommand = New Odbc.OdbcCommand("DELETE FROM ETAPE WHERE TRNNUM = " & trnum & ";", connexionSQL)
-    '    myCommand.ExecuteNonQuery()
-    'End Sub
+    Private Sub Button3_Click(sender As System.Object, e As System.EventArgs) Handles Button3.Click
+        '    Dim trnum As Integer
+        '    trnum = TableTournee.CurrentRow.Cells.Item(0).Value
+        '    myCommand = New Odbc.OdbcCommand("DELETE FROM ETAPE WHERE TRNNUM = " & trnum & ";", connexionSQL)
+        '    myCommand.ExecuteNonQuery()
+        'End Sub
 
     Private Sub Button4_Click(sender As System.Object, e As System.EventArgs) Handles Button4.Click
         Form1.Show()
