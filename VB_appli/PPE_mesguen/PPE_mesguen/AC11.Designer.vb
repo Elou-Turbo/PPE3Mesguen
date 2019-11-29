@@ -39,6 +39,7 @@ Partial Class AC11
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Modifier = New System.Windows.Forms.Button()
         Me.DataTable2TableAdapter = New PPE_mesguen.DataSet1TableAdapters.DataTable2TableAdapter()
+        Me.Button4 = New System.Windows.Forms.Button()
         CType(Me.TableTournee, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataTable2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,7 +58,7 @@ Partial Class AC11
         Me.TableTournee.Location = New System.Drawing.Point(171, 81)
         Me.TableTournee.Name = "TableTournee"
         Me.TableTournee.ReadOnly = True
-        Me.TableTournee.Size = New System.Drawing.Size(820, 376)
+        Me.TableTournee.Size = New System.Drawing.Size(820, 325)
         Me.TableTournee.TabIndex = 0
         '
         'NTOURNEEDataGridViewTextBoxColumn
@@ -126,7 +127,7 @@ Partial Class AC11
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(291, 490)
+        Me.Button1.Location = New System.Drawing.Point(171, 479)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(163, 39)
         Me.Button1.TabIndex = 2
@@ -136,7 +137,7 @@ Partial Class AC11
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(685, 490)
+        Me.Button2.Location = New System.Drawing.Point(171, 424)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(163, 39)
         Me.Button2.TabIndex = 3
@@ -167,12 +168,23 @@ Partial Class AC11
         '
         Me.DataTable2TableAdapter.ClearBeforeFill = True
         '
+        'Button4
+        '
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(828, 424)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(163, 39)
+        Me.Button4.TabIndex = 6
+        Me.Button4.Text = "VOIR LES DEGATS"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'AC11
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1221, 541)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Modifier)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -207,5 +219,6 @@ End Sub
     Friend WithEvents VEHICULEDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DEPARTDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ARRIVERDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Button4 As System.Windows.Forms.Button
 
 End Class

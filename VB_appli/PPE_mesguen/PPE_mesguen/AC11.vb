@@ -77,4 +77,8 @@
     '    myCommand = New Odbc.OdbcCommand("DELETE FROM ETAPE WHERE TRNNUM = " & trnum & ";", connexionSQL)
     '    myCommand.ExecuteNonQuery()
     'End Sub
+
+    Private Sub Button4_Click(sender As System.Object, e As System.EventArgs) Handles Button4.Click
+
+    End Sub
 End Class
