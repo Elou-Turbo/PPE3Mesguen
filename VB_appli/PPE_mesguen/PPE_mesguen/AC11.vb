@@ -78,6 +78,7 @@
         '    myCommand.ExecuteNonQuery()
         'End Sub
 
+    End Sub
     Private Sub Button4_Click(sender As System.Object, e As System.EventArgs) Handles Button4.Click
         Form1.Show()
     End Sub

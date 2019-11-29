@@ -122,7 +122,6 @@
     <Compile Include="Form_Connexion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModifAC12.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
