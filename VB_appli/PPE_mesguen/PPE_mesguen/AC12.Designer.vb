@@ -34,10 +34,10 @@ Partial Class AC12
         Me.IdEtape = New System.Windows.Forms.Label()
         Me.ButtonAjout = New System.Windows.Forms.Button()
         Me.CommentaireTournee = New System.Windows.Forms.TextBox()
-        Me.ListNomChauf = New System.Windows.Forms.ComboBox()
-        Me.ListImmat = New System.Windows.Forms.ComboBox()
         Me.DataSet1 = New PPE_mesguen.DataSet1()
         Me.ListLieuEtape = New System.Windows.Forms.DataGridView()
+        Me.ListNomChauf = New System.Windows.Forms.ListBox()
+        Me.ListImmat = New System.Windows.Forms.ListBox()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ListLieuEtape, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -56,7 +56,7 @@ Partial Class AC12
         Me.DateTimePicker1.CustomFormat = "MM/dd/yy"
         Me.DateTimePicker1.Location = New System.Drawing.Point(115, 123)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(92, 20)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(133, 20)
         Me.DateTimePicker1.TabIndex = 1
         '
         'LabelChauf
@@ -91,7 +91,7 @@ Partial Class AC12
         Me.DateTimePicker2.CustomFormat = "dd/MM/yy"
         Me.DateTimePicker2.Location = New System.Drawing.Point(115, 242)
         Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(92, 20)
+        Me.DateTimePicker2.Size = New System.Drawing.Size(133, 20)
         Me.DateTimePicker2.TabIndex = 7
         '
         'Label1
@@ -150,22 +150,6 @@ Partial Class AC12
         Me.CommentaireTournee.Size = New System.Drawing.Size(143, 71)
         Me.CommentaireTournee.TabIndex = 14
         '
-        'ListNomChauf
-        '
-        Me.ListNomChauf.FormattingEnabled = True
-        Me.ListNomChauf.Location = New System.Drawing.Point(114, 160)
-        Me.ListNomChauf.Name = "ListNomChauf"
-        Me.ListNomChauf.Size = New System.Drawing.Size(93, 21)
-        Me.ListNomChauf.TabIndex = 15
-        '
-        'ListImmat
-        '
-        Me.ListImmat.FormattingEnabled = True
-        Me.ListImmat.Location = New System.Drawing.Point(115, 201)
-        Me.ListImmat.Name = "ListImmat"
-        Me.ListImmat.Size = New System.Drawing.Size(93, 21)
-        Me.ListImmat.TabIndex = 16
-        '
         'DataSet1
         '
         Me.DataSet1.DataSetName = "DataSet1"
@@ -177,18 +161,34 @@ Partial Class AC12
         Me.ListLieuEtape.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ListLieuEtape.Location = New System.Drawing.Point(318, 105)
         Me.ListLieuEtape.Name = "ListLieuEtape"
-        Me.ListLieuEtape.Size = New System.Drawing.Size(219, 137)
+        Me.ListLieuEtape.Size = New System.Drawing.Size(272, 137)
         Me.ListLieuEtape.TabIndex = 17
+        '
+        'ListNomChauf
+        '
+        Me.ListNomChauf.FormattingEnabled = True
+        Me.ListNomChauf.Location = New System.Drawing.Point(116, 164)
+        Me.ListNomChauf.Name = "ListNomChauf"
+        Me.ListNomChauf.Size = New System.Drawing.Size(132, 17)
+        Me.ListNomChauf.TabIndex = 18
+        '
+        'ListImmat
+        '
+        Me.ListImmat.FormattingEnabled = True
+        Me.ListImmat.Location = New System.Drawing.Point(118, 205)
+        Me.ListImmat.Name = "ListImmat"
+        Me.ListImmat.Size = New System.Drawing.Size(130, 17)
+        Me.ListImmat.TabIndex = 19
         '
         'AC12
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(594, 438)
-        Me.Controls.Add(Me.ListLieuEtape)
+        Me.ClientSize = New System.Drawing.Size(602, 438)
         Me.Controls.Add(Me.ListImmat)
         Me.Controls.Add(Me.ListNomChauf)
+        Me.Controls.Add(Me.ListLieuEtape)
         Me.Controls.Add(Me.CommentaireTournee)
         Me.Controls.Add(Me.ButtonAjout)
         Me.Controls.Add(Me.IdEtape)
@@ -202,7 +202,7 @@ Partial Class AC12
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.DateTournee)
         Me.Name = "AC12"
-        Me.Text = "AC12"
+        Me.Text = "Organiser les tournées"
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ListLieuEtape, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -221,8 +221,8 @@ Partial Class AC12
     Friend WithEvents IdEtape As System.Windows.Forms.Label
     Friend WithEvents ButtonAjout As System.Windows.Forms.Button
     Friend WithEvents CommentaireTournee As System.Windows.Forms.TextBox
-    Friend WithEvents ListNomChauf As System.Windows.Forms.ComboBox
-    Friend WithEvents ListImmat As System.Windows.Forms.ComboBox
     Friend WithEvents DataSet1 As PPE_mesguen.DataSet1
     Friend WithEvents ListLieuEtape As System.Windows.Forms.DataGridView
+    Friend WithEvents ListNomChauf As System.Windows.Forms.ListBox
+    Friend WithEvents ListImmat As System.Windows.Forms.ListBox
 End Class
