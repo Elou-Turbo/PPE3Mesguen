@@ -23,7 +23,8 @@
 
 
     Private Sub Ajouter_Click(sender As System.Object, e As System.EventArgs) Handles Ajouter.Click
-        'AC12.show()
+        AC12.Show()
+        Me.Close()
     End Sub
 
 
@@ -46,7 +47,7 @@
 
 
 
-    Private Sub Modifier_Click(sender As System.Object, e As System.EventArgs) Handles Modifier.Click
+    Private Sub Modifier_Click(sender As System.Object, e As System.EventArgs)
         Dim ans As String
         trnnum = Convert.ToString(TableTournee.CurrentRow.Cells.Item(0).Value)
         ans = MsgBox("Confirmer la modification de la tournée N° " & trnnum, vbYesNo)

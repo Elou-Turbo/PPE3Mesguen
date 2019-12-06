@@ -30,7 +30,6 @@ Partial Class AC11
         Me.Retour = New System.Windows.Forms.Button()
         Me.Ajouter = New System.Windows.Forms.Button()
         Me.Suppr = New System.Windows.Forms.Button()
-        Me.Modifier = New System.Windows.Forms.Button()
         Me.TableTournee = New System.Windows.Forms.DataGridView()
         Me.DataTable2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.NTOURNEEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -84,22 +83,12 @@ Partial Class AC11
         'Suppr
         '
         Me.Suppr.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Suppr.Location = New System.Drawing.Point(1068, 287)
+        Me.Suppr.Location = New System.Drawing.Point(1061, 219)
         Me.Suppr.Name = "Suppr"
         Me.Suppr.Size = New System.Drawing.Size(92, 38)
         Me.Suppr.TabIndex = 4
         Me.Suppr.Text = "SUPPRIMER"
         Me.Suppr.UseVisualStyleBackColor = True
-        '
-        'Modifier
-        '
-        Me.Modifier.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Modifier.Location = New System.Drawing.Point(1068, 156)
-        Me.Modifier.Name = "Modifier"
-        Me.Modifier.Size = New System.Drawing.Size(92, 41)
-        Me.Modifier.TabIndex = 5
-        Me.Modifier.Text = "MODIFIER"
-        Me.Modifier.UseVisualStyleBackColor = True
         '
         'TableTournee
         '
@@ -205,7 +194,6 @@ Partial Class AC11
         Me.BackColor = System.Drawing.Color.Green
         Me.ClientSize = New System.Drawing.Size(1221, 541)
         Me.Controls.Add(Me.TableTournee)
-        Me.Controls.Add(Me.Modifier)
         Me.Controls.Add(Me.Suppr)
         Me.Controls.Add(Me.Ajouter)
         Me.Controls.Add(Me.Retour)
@@ -228,7 +216,6 @@ Partial Class AC11
     Friend WithEvents Suppr As System.Windows.Forms.Button
     Friend WithEvents DataSet1 As PPE_mesguen.DataSet1
 
-    Friend WithEvents Modifier As System.Windows.Forms.Button
     Friend WithEvents DateDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataTable2TableAdapter As PPE_mesguen.DataSet1TableAdapters.DataTable2TableAdapter
     Friend WithEvents DataSet11 As PPE_mesguen.DataSet1
