@@ -14,7 +14,7 @@
         'Me.VEHICULETableAdapter.Fill(Me.DataSet1.VEHICULE)
 
         'Connexion à la base MESGUEN
-        connString = "Dsn=CNXORA_Mesguen;uid=u_mesguen;Pwd=estran;"
+        connString = "Dsn=BD_Oracle;uid=u_mesguen;Pwd=estran;"
 
         myConnection.ConnectionString = connString
 
@@ -78,7 +78,7 @@
 
 
         'Affichage de la liste de l'immatriculation des vehicules
-        Dim queryVehi As String = "SELECT VEHIMMAT FROM VEHICULE"
+        Dim queryVehi As String = "SELECT VEHIMMAT FROM VEHICULE;"
         Dim donneeVehi As DataTable = New DataTable
         Dim myAdapterVehi As Odbc.OdbcDataAdapter = New Odbc.OdbcDataAdapter(queryVehi, myConnection)
         myBuilder = New Odbc.OdbcCommandBuilder(myAdapterVehi)
@@ -101,8 +101,8 @@
         'ListImmat.ValueMember = "TRNNUM"
 
         'Affichage de la liste des lieux a selectionner pour l'etape
-        Dim etpid As String
-        etpid = Convert.ToString(TableTournee.CurrentRow.Cells.Item(0).Value)
+        'Dim etpid As String
+        'etpid = Convert.ToString(TableTournee.CurrentRow.Cells.Item(0).Value)
         Dim queryLieuEtp As String = "SELECT ETAPE.LIEUID, LIEUNOM FROM ETAPE, LIEU, TOURNEE WHERE ETAPE.LIEUID = LIEU.LIEUID AND ETAPE.TRNNUM = TOURNEE.TRNNUM AND TOURNEE.TRNNUM= 1;"
         Dim donneeLieuEtp As DataTable = New DataTable
         Dim myAdapterLieuEtp As Odbc.OdbcDataAdapter = New Odbc.OdbcDataAdapter(queryLieuEtp, myConnection)
@@ -123,6 +123,8 @@
     End Sub
 
     Private Sub ListNomChauf_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ListNomChauf.SelectedIndexChanged
+
+        Label6.Text = ListNomChauf.SelectedValue
 
     End Sub
 
