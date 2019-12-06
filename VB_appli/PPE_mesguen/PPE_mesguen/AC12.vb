@@ -9,13 +9,6 @@
     Dim donnee As DataTable
     Dim ds As DataSet
 
-
-    Dim uneDate As Date
-    Dim uneDatePriseCharge As Date
-    Dim unCommentaire As String
-    Dim uneListNomChauf As String
-    Dim uneListImmat As String
-
     Private Sub AC12_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         'TODO: cette ligne de code charge les données dans la table 'DataSet1.VEHICULE'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
         'Me.VEHICULETableAdapter.Fill(Me.DataSet1.VEHICULE)
@@ -110,7 +103,7 @@
         'Affichage de la liste des lieux a selectionner pour l'etape
         'Dim etpid As String
         'etpid = Convert.ToString(TableTournee.CurrentRow.Cells.Item(0).Value)
-        Dim queryLieuEtp As String = "SELECT ETAPE.LIEUID, LIEUNOM FROM ETAPE, LIEU, TOURNEE WHERE ETAPE.LIEUID = LIEU.LIEUID AND ETAPE.TRNNUM = TOURNEE.TRNNUM AND TOURNEE.TRNNUM= 1164368;"
+        Dim queryLieuEtp As String = "SELECT ETAPE.LIEUID, LIEUNOM FROM ETAPE, LIEU, TOURNEE WHERE ETAPE.LIEUID = LIEU.LIEUID AND ETAPE.TRNNUM = TOURNEE.TRNNUM AND TOURNEE.TRNNUM= 1;"
         Dim donneeLieuEtp As DataTable = New DataTable
         Dim myAdapterLieuEtp As Odbc.OdbcDataAdapter = New Odbc.OdbcDataAdapter(queryLieuEtp, myConnection)
         myBuilder = New Odbc.OdbcCommandBuilder(myAdapterLieuEtp)
@@ -125,47 +118,29 @@
     Private Sub DateTimePicker1_ValueChanged(sender As System.Object, e As System.EventArgs) Handles DateTimePicker1.ValueChanged
         'Format JJ/MM/AAAA
         DateTimePicker1.Format = DateTimePickerFormat.Custom
-        DateTimePicker1.CustomFormat = "dd/MM/y"
+        DateTimePicker1.CustomFormat = "dd/MM/YYYY"
 
     End Sub
 
-    Private Sub ListNomChauf_SelectedIndexChanged(sender As System.Object, e As System.EventArgs)
+    Private Sub ListNomChauf_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ListNomChauf.SelectedIndexChanged
+
+        Label6.Text = ListNomChauf.SelectedValue
 
     End Sub
 
-    Private Sub ListImmat_SelectedIndexChanged(sender As System.Object, e As System.EventArgs)
+    Private Sub ListImmat_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ListImmat.SelectedIndexChanged
 
     End Sub
 
     Private Sub DateTimePicker2_ValueChanged(sender As System.Object, e As System.EventArgs) Handles DateTimePicker2.ValueChanged
         'Format JJ/MM/AAAA
         DateTimePicker2.Format = DateTimePickerFormat.Custom
-        DateTimePicker2.CustomFormat = "d/M/y"
-
-    End Sub
-
-    Private Sub CommentaireTournee_TextChanged(sender As System.Object, e As System.EventArgs) Handles CommentaireTournee.TextChanged
-
+        DateTimePicker2.CustomFormat = "d/M/YY "
 
     End Sub
 
     Private Sub ButtonValidation_Click(sender As System.Object, e As System.EventArgs) Handles ButtonValidation.Click
-        uneDate = DateTimePicker1.Value()
-        uneDatePriseCharge = DateTimePicker2.Value()
-        unCommentaire = CommentaireTournee.Text()
-        uneListNomChauf = ListNomChauf.SelectedValue()
-        uneListImmat = ListImmat.SelectedValue()
 
-
-        Dim insert_tournee As String = " INSERT INTO TOURNEE(REMORQUE,CHFID, VEHIMMAT,TRNCOMMENTAIRE,TRNDTE) VALUES(0,'" & uneListNomChauf & "','" & uneListImmat & "','" & unCommentaire & "',TO_DATE('" & uneDate & "', 'dd/MM/yy'));"
-        Dim cmd_insert_tournee = New Odbc.OdbcCommand(insert_tournee, myConnection)
-        Try
-            cmd_insert_tournee.ExecuteNonQuery()
-            AC11.Show()
-            Me.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
     End Sub
 
     Private Sub ButtonAnnulation_Click(sender As System.Object, e As System.EventArgs) Handles ButtonAnnulation.Click
@@ -182,6 +157,8 @@
         'AC13.Show()
         Me.Hide()
 
+        'ButtonAjout.ImageList =
+        'ButtonAjout.ImageAlign = ContentAlignment.MiddleLeft
 
     End Sub
 
@@ -190,10 +167,12 @@
 
 
 
+    Private Sub CommentaireTournee_TextChanged(sender As System.Object, e As System.EventArgs) Handles CommentaireTournee.TextChanged
 
+
+    End Sub
 
     Private Sub ListLieuEtape_CellContentClick(sender As System.Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles ListLieuEtape.CellContentClick
 
     End Sub
-
 End Class

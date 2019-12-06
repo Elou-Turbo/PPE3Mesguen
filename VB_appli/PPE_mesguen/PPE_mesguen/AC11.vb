@@ -68,8 +68,7 @@
 
 
     Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
-        AC12.Show()
-        Me.Hide()
+        'AC12.show()
     End Sub
 
     'Private Sub Button3_Click(sender As System.Object, e As System.EventArgs) Handles Button3.Click
@@ -78,9 +77,4 @@
     '    myCommand = New Odbc.OdbcCommand("DELETE FROM ETAPE WHERE TRNNUM = " & trnum & ";", connexionSQL)
     '    myCommand.ExecuteNonQuery()
     'End Sub
-
-    Private Sub Modifier_Click(sender As System.Object, e As System.EventArgs) Handles Modifier.Click
-        AC12.Show()
-        Me.Hide()
-    End Sub
 End Class
