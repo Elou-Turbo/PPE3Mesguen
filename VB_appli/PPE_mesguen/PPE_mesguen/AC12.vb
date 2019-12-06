@@ -45,33 +45,6 @@
         ' https://www.developpez.net/forums/d1518806/logiciels/microsoft-office/excel/macros-vba-excel/creation-d-dictionnaire-objet/
 
 
-        'Dim comboSource As New Dictionary(Of Integer, String)()
-        'Dim myReader As Odbc.OdbcDataReader = myCommand.ExecuteReader()
-
-        'If myReader.Read() Then
-        '    Console.WriteLine(myReader("CHFID").ToString)
-        '    Else
-        '    Console.WriteLine("PB")
-        '    End If
-        'comboSource.Add()
-
-        'comboSource.Add("1", "Sunday")
-        'comboSource.Add("2", "Monday")
-        'comboSource.Add("3", "Tuesday")
-        'comboSource.Add("4", "Wednesday")
-        'comboSource.Add("5", "Thursday")
-        'comboSource.Add("6", "Friday")
-        'comboSource.Add("7", "Saturday")
-        'ListNomChauf.DataSource = New BindingSource(comboSource, Nothing)
-        'ListNomChauf.DisplayMember = "Value"
-        'ListNomChauf.ValueMember = "Key"
-
-
-
-        'ListNomChauf.DataSource = New BindingSource(comboSource, Nothing)
-        'ListNomChauf.DisplayMember = "Value"
-        'ListNomChauf.ValueMember = "Key"
-
         'Dim key As String = DirectCast(ListNomChauf.SelectedItem, KeyValuePair(Of String, String)).Key
         'Dim value As Integer = DirectCast(ListNomChauf.SelectedItem, KeyValuePair(Of String, String)).Value
 
