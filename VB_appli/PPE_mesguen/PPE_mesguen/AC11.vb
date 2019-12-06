@@ -1,11 +1,11 @@
 ﻿Public Class AC11
     Dim myreader As Odbc.OdbcDataReader
     Dim donnee As DataTable
-    Dim da As odbc.OdbcDataAdapter
+    Dim da As Odbc.OdbcDataAdapter
     Dim cb As Odbc.OdbcCommandBuilder
     Dim connstring As String
     Dim myCommand As New Odbc.OdbcCommand
-   
+
     Private Sub AC11_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
 
 
@@ -13,7 +13,7 @@
         'TODO: cette ligne de code charge les données dans la table 'DataSet1.DataTable2'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
         Me.DataTable2TableAdapter.Fill(Me.DataSet1.DataTable2)
 
-    
+
     End Sub
 
     Private Sub Retour_Click(sender As System.Object, e As System.EventArgs) Handles Retour.Click
@@ -52,7 +52,7 @@
         trnnum = Convert.ToString(TableTournee.CurrentRow.Cells.Item(0).Value)
         ans = MsgBox("Confirmer la modification de la tournée N° " & trnnum, vbYesNo)
         If ans = vbYes Then
-            TestModifier.Show()
+
         End If
     End Sub
 End Class
