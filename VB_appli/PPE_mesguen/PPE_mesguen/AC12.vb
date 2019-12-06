@@ -158,9 +158,9 @@
 
 
         Dim insert_tournee As String = " INSERT INTO TOURNEE(REMORQUE,CHFID, VEHIMMAT,TRNCOMMENTAIRE,TRNDTE) VALUES(0,'" & uneListNomChauf & "','" & uneListImmat & "','" & unCommentaire & "',TO_DATE('" & uneDate & "', 'dd/MM/yy'));"
-        Dim cmd_insert_tournee = New Odbc.OdbcCommand(insert_tournee, myConnection)
+        Dim insertion_tournee = New Odbc.OdbcCommand(insert_tournee, myConnection)
         Try
-            cmd_insert_tournee.ExecuteNonQuery()
+            insertion_tournee.ExecuteNonQuery()
             AC11.Show()
             Me.Close()
         Catch ex As Exception
