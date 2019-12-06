@@ -16,6 +16,9 @@
     Dim uneListNomChauf As String
     Dim uneListImmat As String
 
+    'CONCERNNANT ETAPE
+    Dim etpid As Integer = Convert.ToString(TableTournee.CurrentRow.Cells.Item(0).Value)
+
     Private Sub AC12_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         'TODO: cette ligne de code charge les données dans la table 'DataSet1.VEHICULE'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
         'Me.VEHICULETableAdapter.Fill(Me.DataSet1.VEHICULE)
@@ -184,12 +187,6 @@
 
 
     End Sub
-
-    'CONCERNNANT ETAPE
-    'etpid = Convert.ToString(TableTournee.CurrentRow.Cells.Item(0).Value)
-
-
-
 
 
     Private Sub ListLieuEtape_CellContentClick(sender As System.Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles ListLieuEtape.CellContentClick
