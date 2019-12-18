@@ -31,17 +31,18 @@ Partial Class AC11
         Me.Ajouter = New System.Windows.Forms.Button()
         Me.Suppr = New System.Windows.Forms.Button()
         Me.TableTournee = New System.Windows.Forms.DataGridView()
-        Me.DataTable2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.NTOURNEEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NOMDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.VEHICULEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DEPARTDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ARRIVERDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataTable2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet1 = New PPE_mesguen.DataSet1()
         Me.DataTable2TableAdapter = New PPE_mesguen.DataSet1TableAdapters.DataTable2TableAdapter()
         Me.DataSet11 = New PPE_mesguen.DataSet1()
+        Me.Modif = New System.Windows.Forms.Button()
         CType(Me.TableTournee, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataTable2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -121,11 +122,6 @@ Partial Class AC11
         Me.TableTournee.Size = New System.Drawing.Size(803, 337)
         Me.TableTournee.TabIndex = 6
         '
-        'DataTable2BindingSource
-        '
-        Me.DataTable2BindingSource.DataMember = "DataTable2"
-        Me.DataTable2BindingSource.DataSource = Me.DataSet1BindingSource
-        '
         'NTOURNEEDataGridViewTextBoxColumn
         '
         Me.NTOURNEEDataGridViewTextBoxColumn.DataPropertyName = "N° TOURNEE"
@@ -168,6 +164,11 @@ Partial Class AC11
         Me.ARRIVERDataGridViewTextBoxColumn.Name = "ARRIVERDataGridViewTextBoxColumn"
         Me.ARRIVERDataGridViewTextBoxColumn.ReadOnly = True
         '
+        'DataTable2BindingSource
+        '
+        Me.DataTable2BindingSource.DataMember = "DataTable2"
+        Me.DataTable2BindingSource.DataSource = Me.DataSet1BindingSource
+        '
         'DataSet1BindingSource
         '
         Me.DataSet1BindingSource.DataSource = Me.DataSet1
@@ -187,12 +188,23 @@ Partial Class AC11
         Me.DataSet11.DataSetName = "DataSet1"
         Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'Modif
+        '
+        Me.Modif.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Modif.Location = New System.Drawing.Point(1061, 306)
+        Me.Modif.Name = "Modif"
+        Me.Modif.Size = New System.Drawing.Size(92, 38)
+        Me.Modif.TabIndex = 7
+        Me.Modif.Text = "MODIFIER"
+        Me.Modif.UseVisualStyleBackColor = True
+        '
         'AC11
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Green
         Me.ClientSize = New System.Drawing.Size(1221, 541)
+        Me.Controls.Add(Me.Modif)
         Me.Controls.Add(Me.TableTournee)
         Me.Controls.Add(Me.Suppr)
         Me.Controls.Add(Me.Ajouter)
@@ -228,5 +240,6 @@ Partial Class AC11
     Friend WithEvents ARRIVERDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataTable2BindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents DataSet1BindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Modif As System.Windows.Forms.Button
 
 End Class

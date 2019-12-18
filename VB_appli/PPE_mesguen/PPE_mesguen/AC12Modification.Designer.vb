@@ -38,6 +38,9 @@ Partial Class AC12Modification
         Me.ListImmat = New System.Windows.Forms.ListBox()
         Me.CommentaireTournee = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ButtonModifier = New System.Windows.Forms.Button()
+        Me.ButtonSupprimer = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.ListLieuEtape, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -71,7 +74,7 @@ Partial Class AC12Modification
         'PrisEnCharge
         '
         Me.PrisEnCharge.AutoSize = True
-        Me.PrisEnCharge.Location = New System.Drawing.Point(14, 238)
+        Me.PrisEnCharge.Location = New System.Drawing.Point(12, 245)
         Me.PrisEnCharge.Name = "PrisEnCharge"
         Me.PrisEnCharge.Size = New System.Drawing.Size(86, 13)
         Me.PrisEnCharge.TabIndex = 3
@@ -80,7 +83,7 @@ Partial Class AC12Modification
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(14, 281)
+        Me.Label5.Location = New System.Drawing.Point(12, 281)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(68, 13)
         Me.Label5.TabIndex = 4
@@ -101,16 +104,16 @@ Partial Class AC12Modification
         Me.ListLieuEtape.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ListLieuEtape.Location = New System.Drawing.Point(318, 105)
         Me.ListLieuEtape.Name = "ListLieuEtape"
-        Me.ListLieuEtape.Size = New System.Drawing.Size(245, 131)
+        Me.ListLieuEtape.Size = New System.Drawing.Size(309, 131)
         Me.ListLieuEtape.TabIndex = 6
         '
         'ButtonAjout
         '
         Me.ButtonAjout.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ButtonAjout.Location = New System.Drawing.Point(483, 277)
+        Me.ButtonAjout.Location = New System.Drawing.Point(318, 277)
         Me.ButtonAjout.Name = "ButtonAjout"
-        Me.ButtonAjout.Size = New System.Drawing.Size(83, 24)
-        Me.ButtonAjout.TabIndex = 7
+        Me.ButtonAjout.Size = New System.Drawing.Size(87, 26)
+        Me.ButtonAjout.TabIndex = 14
         Me.ButtonAjout.Text = "Ajouter"
         Me.ButtonAjout.UseVisualStyleBackColor = False
         '
@@ -143,7 +146,7 @@ Partial Class AC12Modification
         '
         'DateTimePicker2
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(114, 238)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(115, 239)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(133, 20)
         Me.DateTimePicker2.TabIndex = 11
@@ -151,17 +154,17 @@ Partial Class AC12Modification
         'ListNomChauf
         '
         Me.ListNomChauf.FormattingEnabled = True
-        Me.ListNomChauf.Location = New System.Drawing.Point(114, 164)
+        Me.ListNomChauf.Location = New System.Drawing.Point(115, 164)
         Me.ListNomChauf.Name = "ListNomChauf"
-        Me.ListNomChauf.Size = New System.Drawing.Size(130, 17)
+        Me.ListNomChauf.Size = New System.Drawing.Size(133, 17)
         Me.ListNomChauf.TabIndex = 12
         '
         'ListImmat
         '
         Me.ListImmat.FormattingEnabled = True
-        Me.ListImmat.Location = New System.Drawing.Point(114, 203)
+        Me.ListImmat.Location = New System.Drawing.Point(115, 203)
         Me.ListImmat.Name = "ListImmat"
-        Me.ListImmat.Size = New System.Drawing.Size(129, 17)
+        Me.ListImmat.Size = New System.Drawing.Size(133, 17)
         Me.ListImmat.TabIndex = 13
         '
         'CommentaireTournee
@@ -175,18 +178,52 @@ Partial Class AC12Modification
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(219, 18)
+        Me.Label1.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Location = New System.Drawing.Point(424, 31)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.Size = New System.Drawing.Size(77, 24)
         Me.Label1.TabIndex = 15
         Me.Label1.Text = "Label1"
+        '
+        'ButtonModifier
+        '
+        Me.ButtonModifier.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.ButtonModifier.Location = New System.Drawing.Point(411, 277)
+        Me.ButtonModifier.Name = "ButtonModifier"
+        Me.ButtonModifier.Size = New System.Drawing.Size(87, 26)
+        Me.ButtonModifier.TabIndex = 16
+        Me.ButtonModifier.Text = "Modifier"
+        Me.ButtonModifier.UseVisualStyleBackColor = False
+        '
+        'ButtonSupprimer
+        '
+        Me.ButtonSupprimer.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.ButtonSupprimer.Location = New System.Drawing.Point(540, 277)
+        Me.ButtonSupprimer.Name = "ButtonSupprimer"
+        Me.ButtonSupprimer.Size = New System.Drawing.Size(87, 26)
+        Me.ButtonSupprimer.TabIndex = 17
+        Me.ButtonSupprimer.Text = "Supprimer"
+        Me.ButtonSupprimer.UseVisualStyleBackColor = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Location = New System.Drawing.Point(65, 31)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(353, 24)
+        Me.Label2.TabIndex = 18
+        Me.Label2.Text = "ORGANISATION DE LA TOURNEE :"
         '
         'AC12Modification
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(602, 438)
+        Me.BackColor = System.Drawing.Color.ForestGreen
+        Me.ClientSize = New System.Drawing.Size(639, 438)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.ButtonSupprimer)
+        Me.Controls.Add(Me.ButtonModifier)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CommentaireTournee)
         Me.Controls.Add(Me.ListImmat)
@@ -204,7 +241,7 @@ Partial Class AC12Modification
         Me.Controls.Add(Me.LabelChauf)
         Me.Controls.Add(Me.DateTournee)
         Me.Name = "AC12Modification"
-        Me.Text = "Organiser les tournées"
+        Me.Text = "Organisation de la tournée"
         CType(Me.ListLieuEtape, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -226,4 +263,7 @@ Partial Class AC12Modification
     Friend WithEvents ListImmat As System.Windows.Forms.ListBox
     Friend WithEvents CommentaireTournee As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents ButtonModifier As System.Windows.Forms.Button
+    Friend WithEvents ButtonSupprimer As System.Windows.Forms.Button
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class
