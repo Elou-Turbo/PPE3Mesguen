@@ -179,7 +179,7 @@ Partial Class AC12Modification
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(424, 31)
+        Me.Label1.Location = New System.Drawing.Point(431, 19)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(77, 24)
         Me.Label1.TabIndex = 15
@@ -209,7 +209,7 @@ Partial Class AC12Modification
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold)
-        Me.Label2.Location = New System.Drawing.Point(65, 31)
+        Me.Label2.Location = New System.Drawing.Point(72, 19)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(353, 24)
         Me.Label2.TabIndex = 18

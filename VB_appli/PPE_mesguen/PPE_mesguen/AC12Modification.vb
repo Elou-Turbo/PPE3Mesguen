@@ -51,8 +51,8 @@
         affichetablo()
 
         'Affichage du chauffeur sélectionné (possibilité de modifier)
-        'Dim queryChauf As String = "SELECT CHFID,CHFNOM FROM CHAUFFEUR, TOURNEE WHERE TOURNEE.CHFID = CHAUFFEUR.CHFID AND TOURNEE.TRNNUM = " & trnnum & ";"
-        Dim queryChauf As String = "SELECT CHFID,CHFNOM FROM CHAUFFEUR;"
+        Dim queryChauf As String = "SELECT CHFID,CHFNOM FROM CHAUFFEUR INNER JOIN TOURNEE ON TOURNEE.CHFID = CHAUFFEUR.CHFID AND TOURNEE.TRNNUM = " & mytrnnum & ";"
+        'Dim queryChauf As String = "SELECT CHFID,CHFNOM FROM CHAUFFEUR;"
         Dim donneeChauf As DataTable = New DataTable
         Dim myAdapterChauf As Odbc.OdbcDataAdapter = New Odbc.OdbcDataAdapter(queryChauf, myConnection)
         myBuilder = New Odbc.OdbcCommandBuilder(myAdapterChauf)
