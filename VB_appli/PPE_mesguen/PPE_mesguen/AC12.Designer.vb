@@ -109,6 +109,7 @@ Partial Class AC12
         '
         'DateTimePicker1
         '
+        Me.DateTimePicker1.CustomFormat = "dd/MM/yy"
         Me.DateTimePicker1.Location = New System.Drawing.Point(115, 123)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(133, 20)

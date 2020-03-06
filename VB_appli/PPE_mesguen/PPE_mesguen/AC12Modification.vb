@@ -52,11 +52,15 @@
 
         'Affichage du chauffeur sélectionné (possibilité de modifier)
         Dim queryChauf As String = "SELECT CHFID,CHFNOM FROM CHAUFFEUR INNER JOIN TOURNEE ON TOURNEE.CHFID = CHAUFFEUR.CHFID AND TOURNEE.TRNNUM = " & mytrnnum & ";"
+        Debug.Print(queryChauf)
         'Dim queryChauf As String = "SELECT CHFID,CHFNOM FROM CHAUFFEUR;"
         Dim donneeChauf As DataTable = New DataTable
-        Dim myAdapterChauf As Odbc.OdbcDataAdapter = New Odbc.OdbcDataAdapter(queryChauf, myConnection)
-        myBuilder = New Odbc.OdbcCommandBuilder(myAdapterChauf)
-        myAdapterChauf.Fill(donneeChauf)
+        'Dim myAdapterChauf As Odbc.OdbcDataAdapter = New Odbc.OdbcDataAdapter(queryChauf, myConnection)
+        'myBuilder = New Odbc.OdbcCommandBuilder(myAdapterChauf)
+        'myAdapterChauf.Fill(donneeChauf)
+        Dim myAdapter = New Odbc.OdbcDataAdapter(queryChauf, myConnection)
+        myBuilder = New Odbc.OdbcCommandBuilder(myAdapter)
+        myAdapter.Fill(donneeChauf)
 
         ListNomChauf.DataSource = donneeChauf
         ListNomChauf.DisplayMember = "CHFNOM"
@@ -79,8 +83,9 @@
 
     Private Sub DateTimePicker1_ValueChanged(sender As System.Object, e As System.EventArgs) Handles DateTimePicker1.ValueChanged
         'Format JJ/MM/AAAA
-        DateTimePicker1.Format = DateTimePickerFormat.Custom
-        DateTimePicker1.CustomFormat = "dd/MM/y"
+        DateTimePicker1.Value = Format(DateTimePicker1.Value, "dd/M/yy")
+        'DateTimePicker1.Format = DateTimePickerFormat.Custom
+        'DateTimePicker1.CustomFormat = "dd/MM/y"
     End Sub
 
     Private Sub ListNomChauf_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ListNomChauf.SelectedIndexChanged

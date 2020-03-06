@@ -72,8 +72,10 @@
 
     Private Sub DateTimePicker1_ValueChanged(sender As System.Object, e As System.EventArgs) Handles DateTimePicker1.ValueChanged
         'Format JJ/MM/AAAA
-        DateTimePicker1.Format = DateTimePickerFormat.Custom
-        DateTimePicker1.CustomFormat = "d/MM/yy"
+        DateTimePicker1.Value = Format(DateTimePicker1.Value, "dd/M/yy")
+        'DateTimePicker1.Format = DateTimePickerFormat.Custom
+        'DateTimePicker1.CustomFormat = "dd/mm/yy"
+
     End Sub
 
     Private Sub ListNomChauf_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ListNomChauf.SelectedIndexChanged
@@ -102,8 +104,11 @@
         uneListImmat = ListImmat.SelectedValue()
 
 
-        'Dim insert_tournee As String = "INSERT INTO TOURNEE(REMORQUE,CHFID, VEHIMMAT,TRNCOMMENTAIRE,TRNDTE) VALUES(0,'" & uneListNomChauf & "','" & uneListImmat & "','" & unCommentaire & "',TO_DATE('" & uneDate & "', 'dd/MM/yy'));"
-        Dim insert_tournee As String = "INSERT INTO TOURNEE(CHFID, VEHIMMAT,TRNCOMMENTAIRE,TRNDTE) VALUES('" & uneListNomChauf & "','" & uneListImmat & "','" & unCommentaire & "',TO_DATE('" & uneDate & "', 'd/MM/yy'));"
+
+        'Dim insert_tournee As String = "INSERT INTO TOURNEE(REMORQUE,CHFID, VEHIMMAT,TRNCOMMENTAIRE,TRNDTE) VALUES(0,'" & uneListNomChauf & "','" & uneListImmat & "','" & unCommentaire & "',TO_DATE('" & uneDate & "', 'dd/MM/yy hh:mm:ss'));"
+        Dim insert_tournee As String = "INSERT INTO TOURNEE(CHFID, VEHIMMAT,TRNCOMMENTAIRE,TRNDTE) VALUES('" & uneListNomChauf & "','" & uneListImmat & "','" & unCommentaire & "',TO_DATE('" & uneDate & "', 'dd/MM/yy'));"
+        'MsgBox(insert_tournee)
+        Debug.Print(insert_tournee)
         Dim insertion_tournee = New Odbc.OdbcCommand(insert_tournee, myConnection)
         Try
             insertion_tournee.ExecuteNonQuery()
